@@ -1,0 +1,24 @@
+{% extends 'baseview.html' %}
+
+{% block content %}
+<div class="contacts-container">
+    <h1>Контакты</h1>
+    <p>Здесь будет отображаться информация о сотрудниках, включая их фото, описание выполняемых работ, контактные данные и другую информацию.</p>
+    
+    {% for emp in employees %}
+    <div class="contact">
+        <h2>{{ emp.user.username }}</h2>
+        <!-- {% if emp.photo %}
+        <img src="{{ contact.photo.url }}" alt="{{ contact.user.username }}" width="150">
+        {% else %}
+            <img src="C:\Users\Камила\Documents\253505\4 семестр\ИГИ\Django\PharmacyApp\media\default_photo.png" alt="No photo" width="150">
+        {% endif %} -->
+        <img src="{{ emp.photo.url }}" alt="haha" style="max-width: 200px; max-height: 200px;">
+        <p>Телефон: {{ emp.phone_number }}</p>
+    </div>
+    {% endfor %}
+    
+
+</div>
+{% endblock %}
+
