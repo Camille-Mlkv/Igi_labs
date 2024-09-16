@@ -132,7 +132,7 @@ class Employee(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
     phone_number = models.CharField(max_length=18,default='+375-25-111-11-11')
     birth_date = models.DateField(default='2000-01-01')
-    photo=models.ImageField(default='contact_photos/default_photo.png',upload_to='contact_photos/')
+    photo=models.ImageField(default='contact_photos/default_photo.png',upload_to='contact_photos/',blank=True)
     def __str__(self):
         return self.user.username
     

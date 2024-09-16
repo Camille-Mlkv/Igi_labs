@@ -5,6 +5,7 @@ from ..models import Contact,Article,Vacancy,Question,PromoCode,News,FeedBack,Em
 
 def contacts(request):
     #contacts = Contact.objects.all()
+    #employees=Employee.objects.all()
     employees=Employee.objects.all()
     return render(request, 'contacts.html', {'employees': employees})
 
