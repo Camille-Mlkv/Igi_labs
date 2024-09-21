@@ -1,16 +1,15 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect,get_object_or_404
 #from .models import Contact,Article,Vacancy,Question,PromoCode,News
 # Create your views here.
-from ..models import Contact,Article,Vacancy,Question,PromoCode,News,FeedBack,Employee
+from ..models import Contact,Article,Vacancy,Question,PromoCode,News,FeedBack,Employee,Partner,CompanyInfo
 
 def contacts(request):
-    #contacts = Contact.objects.all()
-    #employees=Employee.objects.all()
     employees=Employee.objects.all()
     return render(request, 'contacts.html', {'employees': employees})
 
 def about(request):
-    return render(request, 'about.html')
+    company = CompanyInfo.objects.first() 
+    return render(request, 'about.html', {'company': company})
 
 def policy(request):
     return render(request, 'policy.html')
@@ -21,8 +20,10 @@ def vacancies(request):
 
 def index(request):
     latest_article = Article.objects.first()
+    partners = Partner.objects.all()
     context = {
-        'latest_article': latest_article
+        'latest_article': latest_article,
+        'partners':partners
     }
     return render(request, 'index.html', context)
 
@@ -45,6 +46,10 @@ def promocodes(request):
 def news(request):
     news = News.objects.all()
     return render(request, 'news.html', {'news': news})
+
+def news_detail(request, id):
+    news_item = get_object_or_404(News, id=id)
+    return render(request, 'news_details.html', {'news': news_item})
 
 def feedbacks(request):
     feedbacks=FeedBack.objects.all()

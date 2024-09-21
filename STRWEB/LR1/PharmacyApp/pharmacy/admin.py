@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Contact,Vacancy,Article,Question,PromoCode,News,Medication,PickupPoint,Purchase,Sale,Admin,Employee,Customer,FeedBack
+from .models import Contact,Vacancy,Article,Question,PromoCode,News,Medication,PickupPoint,Purchase,Sale,Admin,Employee,Customer,FeedBack,Partner,CompanyInfo,CartItem
 # Register your models here.
 
 admin.site.register(Contact)
@@ -16,3 +16,6 @@ admin.site.register(Admin)
 admin.site.register(Employee)
 admin.site.register(Customer)
 admin.site.register(FeedBack)
+admin.site.register(Partner)
+admin.site.register(CompanyInfo)
+admin.site.register(CartItem)

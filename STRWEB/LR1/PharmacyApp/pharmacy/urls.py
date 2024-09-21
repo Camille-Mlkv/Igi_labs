@@ -11,6 +11,7 @@ urlpatterns = [
     path('questions/',views.questions,name='questions'),
     path('promocodes/',views.promocodes,name='promocodes'),
     path('news/',views.news,name='news'),
+    path('news/<int:id>/', views.news_detail, name='news_detail'),
     path('feedbacks/',views.feedbacks,name='feedbacks'),
 
     path('admin/home/', admins.AdminHome, name='admin_home'),
@@ -20,6 +21,7 @@ urlpatterns = [
     path('medications/<int:medication_id>/edit/', admins.edit_medication, name='edit_medication'),
     path('medications/<int:medication_id>/delete/', admins.delete_medication, name='delete_medication'),
     path('filter_medication',admins.filter_medications,name='filter_medications'),
+    path('medication/<int:id>/', admins.medication_detail, name='medication_detail'),
 
     path('add/department', admins.add_department, name='add_department'),
     path('departments/', admins.view_departments, name='view_departments'),
@@ -40,6 +42,13 @@ urlpatterns = [
 
     path('pickup_points/', customers.view_pickup_points, name='view_pickup_points'),
     path('catalog/', customers.view_catalog, name='view_catalog'),
+    path('to_cart/<int:medication_id>/', customers.add_medication_to_cart, name='add_medication_to_cart'),
+    path('customer/cart/', customers.view_my_cart, name='customer_cart'),
+    path('pay/<int:item_id>/', customers.payment_page, name='payment_page'),
+    path('complete_payment/<int:item_id>/', customers.complete_payment, name='complete_payment'),
+    path('payment_success/', customers.payment_success, name='payment_success'),
+    path('cart/update/<int:item_id>/<str:action>/', customers.update_cart_item_quantity, name='update_cart_item_quantity'),
+    path('cart/remove/<int:item_id>/', customers.remove_from_cart, name='remove_from_cart'),
     path('buy_medication/<int:medication_id>/',customers.buy_medication,name='buy_medication'),
     path('customer/purchases/', customers.customer_purchases, name='customer_purchases'),
     path('leave_feedback/',customers.leave_feedback,name='leave_feedback'),

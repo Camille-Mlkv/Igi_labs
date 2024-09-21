@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>{{ request.user.username }}'s Cart</h2>
+
+        {% if cart_items %}
+            <table class="table" style="border-collapse: collapse; width: 100%;">
+                <thead>
+                    <tr>
+                        <th style="border: 1px solid #ddd; padding: 8px;">Product</th>
+                        <th style="border: 1px solid #ddd; padding: 8px;">Quantity</th>
+                        <th style="border: 1px solid #ddd; padding: 8px;">Price per unit</th>
+                        <th style="border: 1px solid #ddd; padding: 8px;">Total</th>
+                        <th style="border: 1px solid #ddd; padding: 8px;">Pay</th>
+                        <th style="border: 1px solid #ddd; padding: 8px;">Decrease</th>
+                        <th style="border: 1px solid #ddd; padding: 8px;">Increase</th>
+                        <th style="border: 1px solid #ddd; padding: 8px;">Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in cart_items %}
+                    <tr>
+                        <td style="border: 1px solid #ddd; padding: 8px;">{{ item.product.name }}</td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">{{ item.quantity }}</td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">${{ item.product.cost }}</td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">{{ item.total_price }}</td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                            <a href="{% url 'payment_page' item.id %}" class="btn btn-primary">Pay</a>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                            <a href="{% url 'update_cart_item_quantity' item.id 'decrease' %}" class="btn btn-warning">Decrease</a>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                            <a href="{% url 'update_cart_item_quantity' item.id 'increase' %}" class="btn btn-success">Increase</a>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                            <a href="{% url 'remove_from_cart' item.id %}" class="btn btn-danger">Remove</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            <div class="d-flex justify-content-end">
+                <h4>Total: ${{ total_price }}</h4>
+            </div>
+        {% else %}
+            <p>Your cart is empty.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

@@ -120,6 +120,14 @@ class Purchase(models.Model):
         return f"{self.buyer.username}'s purchase of {self.product.name}"
     
 
+class CartItem(models.Model):
+    buyer = models.ForeignKey(User, related_name='carter', on_delete=models.CASCADE)
+    product = models.ForeignKey(Medication, on_delete=models.CASCADE)
+    quantity = models.PositiveIntegerField(default=1)
+    def __str__(self):
+        return f"{self.buyer.username}'s cart's {self.product.name}"
+    
+
 class Customer(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True,related_name = 'customer',related_query_name='customer')
     purchases = models.ManyToManyField(Purchase) #new
@@ -173,3 +181,26 @@ class FeedBack(models.Model):
     note = models.PositiveIntegerField()
     text = models.TextField()
     date = models.DateTimeField()
+
+
+class Partner(models.Model):
+    name = models.CharField(max_length=255)
+    website_url = models.URLField()
+    logo = models.ImageField(upload_to='partner_logos/')
+
+    def __str__(self):
+        return self.name
+    
+
+
+class CompanyInfo(models.Model):
+    name = models.CharField(max_length=255)
+    description = models.TextField()
+    video_url = models.URLField(blank=True, null=True)
+    logo = models.ImageField(upload_to='company_logos/', blank=True, null=True)
+    history = models.TextField()
+    details = models.TextField()
+    certificate = models.TextField()
+
+    def __str__(self):
+        return self.name

@@ -1,0 +1,26 @@
+{% extends 'baseview.html' %}
+
+{% block content %}
+<div class="medication-detail">
+    <h1>{{ medication.name }}</h1>
+    <img src="{{ medication.photo.url }}" alt="{{ medication.name }}" width="300">
+    <p><strong>Код:</strong> {{ medication.code }}</p>
+    <p><strong>Категория:</strong> {{ medication.category }}</p>
+    <p><strong>Описание:</strong> {{ medication.description }}</p>
+    <p><strong>Инструкция:</strong> {{ medication.instruction }}</p>
+    <p><strong>Цена:</strong> {{ medication.cost }} рублей</p>
+
+    {% if request.user.is_admin %}
+          <a href="{% url 'edit_medication' medication.id %}" class="btn btn-primary">Edit</a>
+          <form action="{% url 'delete_medication' medication.id %}" method="post" style="display: inline;">
+              {% csrf_token %}
+              <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this medication?')">Delete</button>
+          </form>
+        {% elif request.user.is_customer %}
+        <a href="{% url 'add_medication_to_cart' medication.id %}" 
+        onclick="alert('Medication added to your cart!');">Add to Cart</a>
+        {% endif %}
+    
+    <a href="{% url 'view_catalog' %}" class="btn btn-primary">Вернуться к каталогу</a><br>
+</div>
+{% endblock %}

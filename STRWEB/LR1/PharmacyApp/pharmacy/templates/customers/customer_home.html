@@ -6,6 +6,7 @@
     <a href="{% url 'view_pickup_points' %}" class="btn btn-primary">Pickup points</a><br>
     <a href="{% url 'view_catalog' %}" class="btn btn-primary">Medications</a><br>
     <a href="{% url 'customer_purchases' %}" class="btn btn-primary">My purchases</a><br>
+    <a href="{% url 'customer_cart' %}" class="btn btn-primary">My cart</a><br>
 
     <form method="GET" action="{% url 'get_age' %}">
       <label for="Your name">Your name:</label>
@@ -18,6 +19,11 @@
       <input type="text" name="name" id="name">
       <button type="submit">Получить национальность</button>
     </form>
-
+    
+    <aside class="sidebar"></aside>
+      <h3>Important Information</h3>
+      <p>Check out our latest promotions and updates!</p>
+      <!-- You can add more content here, such as links or announcements -->
+    </aside>
   </div>
 {% endblock %}

@@ -81,6 +81,11 @@ def view_medications(request):
     return render(request, 'view_medications.html', {'medications': medications})
 
 
+def medication_detail(request, id):
+    medication = get_object_or_404(Medication, id=id)
+    return render(request, 'medication_detail.html', {'medication': medication})
+
+
 @login_required
 @admin_required
 def edit_medication(request, medication_id):

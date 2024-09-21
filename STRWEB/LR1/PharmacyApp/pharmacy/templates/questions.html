@@ -5,12 +5,17 @@
     <h1>Вопросы и ответы</h1>
     
     {% for question in questions %}
-    <div class="question">
-        <h2>{{ question.question }}</h2>
-        <p>Ответ: {{ question.answer }}</p>
-        <p>Дата: {{ question.date_posted }}</p>
-    </div>
+    <details>
+        <summary>
+            <small><mark>{{ question.date_posted }}</mark></small>
+            {{ question.question }}
+        </summary>
+        <p>
+            {{ question.answer }}
+        </p>
+    </details>
     {% endfor %}
+    
 
 </div>
 {% endblock %}

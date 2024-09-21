@@ -1,8 +1,51 @@
+<!DOCTYPE html>
+<html>
 {% extends 'baseview.html' %}
+<head>
+  <!-- <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <title>About Us</title>
+</head>
 
 {% block content %}
-<div class="about-container">
-    <h1>О компании</h1>
-    <p>Здесь будет отображаться информация о компании.</p>
-</div>
+  <body>
+    <h1>{{ company.name }}</h1>
+    <p>{{ company.description }}</p>
+  
+    {% if company.video_url %}
+      <div>
+        <h2>Watch our video</h2>
+        <iframe width="560" height="315" 
+            src="{{ company.video_url }}" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+      </div>
+    {% endif %}
+  
+    {% if company.logo %}
+      <div>
+        <h2>Our Logo</h2>
+        <img src="{{ company.logo.url }}" alt="Company Logo" style="height: 100px;">
+      </div>
+    {% endif %}
+  
+    <div>
+      <h2>Company History</h2>
+      <p>{{ company.history }}</p>
+    </div>
+  
+    <div>
+      <h2>Company Details</h2>
+      <p>{{ company.details }}</p>
+    </div>
+  
+    <div>
+      <h2>Certificate</h2>
+      <p>{{ company.certificate }}</p>
+    </div>
+  </body>
+
 {% endblock %}
+</html>

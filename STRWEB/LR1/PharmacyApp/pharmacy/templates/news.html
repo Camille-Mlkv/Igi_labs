@@ -13,6 +13,7 @@
             <img src="contact_photos/default_photo.png" alt="No photo" width="150">
         {% endif %} -->
         <p>Кратко: {{ actu.short_description }}</p>
+        <a href="{% url 'news_detail' actu.id %}" class="btn btn-primary">Читать далее</a>
     </div>
     {% endfor %}
 

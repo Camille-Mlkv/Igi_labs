@@ -14,7 +14,7 @@ from django.http import JsonResponse
 
 # from ..decorators import student_required
 from ..forms import  CustomerSignUpForm,PurchaseForm,FeedbackForm
-from ..models import Customer, User,PickupPoint,Medication,Purchase,Sale
+from ..models import Customer, User,PickupPoint,Medication,Purchase,Sale,CartItem
 from ..decorators import customer_required
 
 
@@ -122,3 +122,84 @@ def get_country(request):
         countries = data.get('country')
         return render(request, 'get_country.html', {'countries': countries,'name':name})
     return JsonResponse({'error': 'Invalid request'})
+
+
+
+@login_required
+@customer_required
+def add_medication_to_cart(request, medication_id):
+    medication = get_object_or_404(Medication, pk=medication_id)
+    existing_cart_item=CartItem.objects.filter(buyer=request.user,product=medication)
+    if existing_cart_item:
+        old_quantity = CartItem.objects.get(buyer=request.user,product=medication).quantity
+        new_quantity=old_quantity+1;
+        CartItem.objects.filter(buyer=request.user,product=medication).update(quantity=new_quantity)
+        messages.success(request, f"Updated {medication.name} quantity in your cart.")
+    else:
+        cart_item=CartItem.objects.create(buyer=request.user,product=medication,quantity=1)
+    return redirect('customer_home')
+
+
+@login_required
+@customer_required
+def view_my_cart(request):
+    cart_items = CartItem.objects.filter(buyer=request.user)
+    total_price = sum(item.product.cost * item.quantity for item in cart_items)
+    for item in cart_items:
+        item.total_price = item.product.cost * item.quantity  # This attaches total_price dynamically to the item
+    return render(request, 'customer_cart_items.html', {
+        'cart_items': cart_items,
+        'total_price': total_price
+    })
+
+
+def payment_page(request, item_id):
+    item = get_object_or_404(CartItem, id=item_id)
+    item.total_price = item.product.cost * item.quantity
+    pickup_points=PickupPoint.objects.all()
+    return render(request, 'payment_page.html', {
+        'item': item,
+        'pickup_points': pickup_points
+    })
+
+
+def complete_payment(request, item_id):
+    item = get_object_or_404(CartItem, id=item_id)
+    if request.method == 'POST':
+        pickup_point_id = request.POST.get('pickup_point')
+        pickup_point = get_object_or_404(PickupPoint, id=pickup_point_id)
+        purchase=Purchase.objects.create(buyer=request.user,product=item.product,pickup_point=pickup_point,quantity=item.quantity,date_sold=datetime.now())
+        existing_sale=Sale.objects.filter(product=item.product,pickup_point=pickup_point)
+        if existing_sale:
+            old_quantity = Sale.objects.get(product=item.product,pickup_point=pickup_point).quantity
+            new_quantity=old_quantity+item.quantity;
+            Sale.objects.filter(product=item.product,pickup_point=pickup_point).update(quantity=new_quantity)
+        else:
+            sale=Sale.objects.create(product=item.product,quantity=item.quantity,pickup_point=pickup_point)
+        item.delete()
+    return render(request, 'payment_success.html')
+
+
+def payment_success(request):
+    return render(request, 'payment_success.html')
+
+
+def update_cart_item_quantity(request, item_id, action):
+    item = get_object_or_404(CartItem, id=item_id)
+    
+    if action == 'increase':
+        item.quantity += 1
+    elif action == 'decrease':
+        if item.quantity > 1:
+            item.quantity -= 1
+        else:
+            return redirect('customer_cart')  # Перенаправляем обратно в корзину, если количество не изменилось
+    
+    item.save()
+    return redirect('customer_cart')
+
+
+def remove_from_cart(request, item_id):
+    item = get_object_or_404(CartItem, id=item_id)
+    item.delete()
+    return redirect('customer_cart')

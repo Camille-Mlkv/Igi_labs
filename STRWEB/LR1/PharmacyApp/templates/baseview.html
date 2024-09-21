@@ -1,62 +1,154 @@
-<html>
+<!DOCTYPE html>
+
+<html lang="en">
     <head>
-        <title>My Pharmacy Website</title>
+      <meta charset="utf-8">
+      <title>My Pharmacy Website</title>
+      <link rel="icon" href='/media/favicon.ico' type="image/x-icon">
+        <style>
+            .navbar {
+              display: flex;
+              align-items: center; 
+              justify-content: space-between;
+              background-color: #f8f9fa;
+              padding: 10px;
+            }
+          
+            .navbar img {
+              margin-right: 20px; 
+            }
+          
+            .navbar ul {
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+              display: flex;
+            }
+          
+            .navbar ul li {
+              margin-left: 20px; 
+            }
+          
+            .navbar ul li a {
+              text-decoration: none;
+              color: #000; 
+              padding: 5px 10px;
+            }
+          
+            .navbar ul li a:hover {
+              background-color: #e9ecef; 
+              border-radius: 5px;
+            }
+
+            .auth-buttons {
+                display: flex;
+                align-items: center;
+              }
+              
+              .auth-buttons .logged-in {
+                margin-right: 20px;
+              }
+              
+              .auth-buttons a {
+                margin-left: 10px;
+                text-decoration: none;
+              }
+              
+              .auth-buttons .btn {
+                padding: 5px 15px;
+                border: none;
+                border-radius: 5px;
+              }
+              
+              .auth-buttons .btn-light {
+                background-color: #f8f9fa;
+                color: #000;
+              }
+              
+              .auth-buttons .btn-primary {
+                background-color: #007bff;
+                color: #fff;
+              }
+              
+              .auth-buttons .btn-light:hover,
+              .auth-buttons .btn-primary:hover {
+                opacity: 0.8;
+              }
+          </style>
     </head>
     <body>
         <nav class="navbar">
+            <img src="/media/logo.jpg" alt="Logo" style="height: 50px;">
             <ul>
-                <li><a href="{% url 'contacts' %}">Контакты</a></li>
-            </ul>
-            <ul>
-                <li><a href="{% url 'about' %}">О компании</a></li>
-            </ul>
-            <ul>
-                <li><a href="{% url 'policy' %}">Политика конфиденциальности</a></li>
-            </ul>
-            <ul>
-                <li><a href="{% url 'vacancies' %}">Вакансии</a></li>
-            </ul>
-            <ul>
-                <li><a href="{% url 'index' %}">Главная</a></li>
-            </ul>
-            <ul>
-                <li><a href="{% url 'questions' %}">Вопросы и ответы</a></li>
-            </ul>
-            <ul>
-                <li><a href="{% url 'promocodes' %}">Промокоды и купоны</a></li>
-            </ul>
-            <ul>
-                <li><a href="{% url 'news' %}">Новости</a></li>
-            </ul>
-            <ul>
-                <li><a href="{% url 'feedbacks' %}">Отзывы</a></li>
-            </ul>
-            <ul>
-                <li><a href="{% url 'home' %}">Домашняя страница</a></li>
+              <li><a href="/contacts/">Контакты</a></li>
             </ul>
 
+            <ul>
+              <li><a href="/about/">О компании</a></li>
+            </ul>
+            <ul>
+                <li><a href="/policy/">Политика конфиденциальности</a></li>
+            </ul>
+            <ul>
+                <li><a href="/vacancies/">Вакансии</a></li>
+            </ul>
+            <ul>
+                <li><a href="/index/">Главная</a></li>
+            </ul>
+            <ul>
+                <li><a href="/questions/">Вопросы и ответы</a></li>
+            </ul>
+            <ul>
+                <li><a href="/promocodes/">Промокоды и купоны</a></li>
+            </ul>
+            <ul>
+                <li><a href="/news/">Новости</a></li>
+            </ul>
+            <ul>
+                <li><a href="/feedbacks/">Отзывы</a></li>
+            </ul>
+            <div class="auth-buttons">
+                {% if user.is_authenticated %}
+                {% if user.is_superuser %}
+                <a href="{% url 'logout' %}">Log out</a>.</p>
+                  {% elif user.is_admin %}
+                    <a href="/admin/home/" class="btn btn-primary">Admin Home</a>
+                    <a href="{% url 'logout' %}">Log out</a>.</p>
+                  {% elif user.is_customer %}
+                    <a href="/customer/home/" class="btn btn-primary">Customer Home</a>
+                    <a href="{% url 'logout' %}">Log out</a>.</p>
+                  {% elif user.is_employee %}
+                    <a href="/employee/home/" class="btn btn-primary">Employee Home</a>
+                    <a href="{% url 'logout' %}">Log out</a>.</p>
+                  {% endif %}
+                {% else %}
+                  <a href="{% url 'login' %}" class="btn btn-primary">Log in</a>
+                  <a href="/accounts/signup/" class="btn btn-primary">Sign up</a>
+                {% endif %}
+              </div>
         </nav>
-        
-          <h1>Welcome! <span class="icon-emo-happy"></span></h1>
-          </div>
-          {% if user.is_authenticated %}
-            <p class="pt-3">Logged in as <strong>{{ user.username }}</strong>. <a href="{% url 'logout' %}">Log out</a>.</p>
-            {% if user.is_admin %}
-                <a href="{% url 'admin_home' %}" class="btn btn-primary" role="button">Admin Home</a>
-            {% elif user.is_customer %}
-                <a href="{% url 'customer_home' %}" class="btn btn-primary" role="button">Customer Home</a>
-            {% elif user.is_employee %}
-                <a href="{% url 'employee_home' %}" class="btn btn-primary" role="button">Employee Home</a>
-            {% endif %}
-          {% else %}
-            <a href="{% url 'login' %}" class="btn btn-light" role="button">Log in</a>
-            <a href="{% url 'signup' %}" class="btn btn-primary" role="button">Sign up</a>
-          {% endif %}
-
           <div>
             {% block content %}
             {% endblock %}
         </div>
 
+        <footer class="footer">
+          <p>&copy; 2024 My Pharmacy Website</p>
+          <p>
+            <a href="/contacts/">Contact Us</a> |
+            <a href="/policy/">Privacy Policy</a> |
+            <a href="/feedbacks/">Feedback</a>
+          </p>
+          <p>
+              Follow us on:
+              <a href="#" target="_blank">Facebook</a> |
+              <a href="#" target="_blank">Twitter</a> |
+              <a href="#" target="_blank">Instagram</a>
+          </p>
+      </footer>
+
     </body>
+
+    
+  
 </html>
