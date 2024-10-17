@@ -1,0 +1,118 @@
+/* General container for feedback page */
+.contacts-container {
+    font-family: sans-serif; /* Global font for the container */
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+/* Styling the main header */
+h1 {
+    font-size: xx-large; /* Keyword for large font */
+    font-weight: bold;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Feedback card style */
+.new {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Username and feedback note */
+.new h2:first-child {
+    font-size: large; /* Keywords to adjust size */
+    color: #007BFF; /* Color for the author's username */
+    text-transform: capitalize;
+}
+
+.new h2:nth-child(2) {
+    font-size: medium;
+    color: #555;
+}
+
+/* Feedback text */
+.new h2:nth-child(3) {
+    font-size: small;
+    font-style: italic; /* Italic for emphasis */
+    color: #333;
+}
+
+/* Date styling */
+.new h2:nth-child(4) {
+    font-size: small;
+    color: #888;
+}
+
+/* Leave feedback button */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: medium;
+    background-color: #3e11f1;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Pseudoclasses for the button */
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn:focus {
+    outline: 2px solid #333;
+    outline-offset: 2px;
+}
+
+/* Form component (if there's a feedback form on the leave_feedback page) */
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: medium; /* Keyword for input text */
+    font-family: inherit;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease;
+}
+
+/* Pseudoclass for form input focus */
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #007BFF;
+    outline: none; /* Remove default outline */
+}
+
+/* Form submit button */
+input[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    font-size: medium;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover and focus states for submit button */
+input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+input[type="submit"]:focus {
+    outline: 2px solid #555;
+    outline-offset: 2px;
+}

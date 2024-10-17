@@ -1,0 +1,93 @@
+.medications-grid {
+    display: grid; /* Используем Grid Layout */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Колонки с минимальной шириной 200px */
+    gap: 20px; /* Отступы между элементами */
+    padding: 20px; /* Внутренний отступ для сетки */
+}
+
+.medication-item {
+    background-color: #f8f9fa; /* Цвет фона для каждого элемента */
+    border: 1px solid #ddd; /* Рамка */
+    border-radius: 8px; /* Закругленные углы */
+    padding: 10px; /* Внутренний отступ внутри элемента */
+    text-align: center; /* Выравнивание текста по центру */
+}
+
+.medication-image {
+    max-width: 100%; /* Изображение адаптируется по ширине элемента */
+    height: auto; /* Сохраняем пропорции изображения */
+}
+
+
+.medication-item a {
+    font-size: 20px; 
+    text-decoration: none;
+    text-align: center; 
+    color: #000; 
+    padding: 5px 10px;
+    font-family: 'Roboto', sans-serif; /* Применяем шрифт к ссылкам */
+    font-weight: 700;
+    color:#3e11f1;
+}
+
+.medication-item a:hover {
+    color: #ff5722; /* Цвет ссылки при наведении */
+    transition: color 0.3s; /* Плавный переход цвета */
+}
+
+.filter-form {
+    display: flex; /* Используем Flexbox для размещения элементов в строку */
+    flex-direction: column; /* Элементы будут в колонку */
+    max-width: 400px; /* Максимальная ширина формы */
+    margin: 20px auto; /* Центрирование формы по горизонтали */
+    padding: 20px; /* Внутренний отступ формы */
+    border: 1px solid #ddd; /* Рамка формы */
+    border-radius: 8px; /* Закругленные углы */
+    background-color: #f9f9f9; /* Цвет фона формы */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень для визуального эффекта */
+}
+
+.filter-form label {
+    margin-bottom: 5px; /* Отступ снизу для меток */
+    font-weight: bold; /* Полужирный текст для меток */
+}
+
+.form-input {
+    padding: 10px; /* Внутренний отступ для полей ввода */
+    margin-bottom: 15px; /* Отступ снизу для полей ввода */
+    border: 1px solid #ccc; /* Цвет рамки */
+    border-radius: 5px; /* Закругленные углы */
+    font-size: 16px; /* Размер шрифта */
+}
+
+.form-input:focus {
+    border-color: #3e11f1; /* Цвет рамки при фокусировке */
+    outline: none; /* Убираем стандартный контур */
+}
+
+.form-button {
+    padding: 10px; /* Внутренний отступ для кнопки */
+    border: none; /* Убираем рамку */
+    border-radius: 5px; /* Закругленные углы */
+    background-color: #3e11f1; /* Цвет фона кнопки */
+    color: #fff; /* Цвет текста */
+    font-size: 16px; /* Размер шрифта */
+    cursor: pointer; /* Курсор при наведении */
+}
+
+.form-button:hover {
+    background-color: #2800c6; /* Цвет фона при наведении */
+}
+
+
+.medications-title {
+    font-size: 24px; /* Размер шрифта */
+    font-weight: bold; /* Полужирный текст */
+    color: #333; /* Цвет текста */
+    text-align: center; /* Выравнивание по центру */
+    margin: 20px 0; /* Отступ сверху и снизу */
+    padding: 10px; /* Внутренний отступ */
+    border-bottom: 2px solid #007bff; /* Нижняя рамка */
+    text-transform: uppercase; /* Преобразование текста в верхний регистр */
+    letter-spacing: 1px; /* Межбуквенное расстояние */
+}

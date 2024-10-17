@@ -1,0 +1,37 @@
+/* Стили для заголовка */
+.welcome-title {
+    font-size: 28px;
+    color: #4a4a4a;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Общие стили для блока действий */
+.employee-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Выровняем кнопки по центру */
+    gap: 15px; /* Пространство между кнопками */
+    margin-top: 20px;
+}
+
+/* Стили для кнопок */
+.btn-action {
+    display: inline-block;
+    background-color: #3e11f1; /* Приятный синий цвет кнопки */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px; /* Скругление краев */
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    transition: background-color 0.3s ease; /* Анимация при наведении */
+}
+
+/* Изменение цвета при наведении */
+.btn-action:hover {
+    background-color: #434190;
+}
+
+

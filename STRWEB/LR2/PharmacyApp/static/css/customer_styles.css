@@ -1,0 +1,92 @@
+/* Стили для контейнера */
+.container {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовок приветствия */
+.welcome-text {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #3e11f1;
+}
+
+/* Стили для группы кнопок */
+.button-group {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+/* Стили для кнопок */
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #3e11f1;
+    color: white;
+    border: 1px solid #3e11f1;
+}
+
+.btn-primary:hover {
+    background-color: #357ab8;
+}
+
+.btn-secondary {
+    background-color: #f39c12;
+    color: white;
+    border: 1px solid #e67e22;
+}
+
+.btn-secondary:hover {
+    background-color: #e67e22;
+}
+
+/* Стили для формы */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Стили для боковой панели */
+.sidebar {
+    background-color: #ecf0f1;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.sidebar-title {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #3e11f1;
+}
+
+.sidebar-text {
+    font-size: 16px;
+    color: #2c3e50;
+}
+
+/* Выравнивание текста в таблицах */
+input[type="text"] {
+    display: inline-block;
+}

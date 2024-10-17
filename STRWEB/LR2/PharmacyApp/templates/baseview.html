@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <title>My Pharmacy Website</title>
+      {% load static %}
+      <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+      <link rel="icon" href='/media/favicon.ico' type="image/x-icon">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+    </head>
+    <body>
+        <nav class="navbar">
+            <img src="/media/logo.jpg" alt="Logo" style="height: 50px;">
+            <h4 class="company-name">
+              <a href="/" class="company-link">LifeLine</a>
+            </h4>
+            <ul>
+              <li><a href="/contacts/">Контакты</a></li>
+            </ul>
+
+            <ul>
+              <li><a href="/about/">О компании</a></li>
+            </ul>
+            <ul>
+                <li><a href="/policy/">Политика конфиденциальности</a></li>
+            </ul>
+            <ul>
+                <li><a href="/vacancies/">Вакансии</a></li>
+            </ul>
+            <ul>
+                <li><a href="/index/">Главная</a></li>
+            </ul>
+            <ul>
+                <li><a href="/questions/">Вопросы и ответы</a></li>
+            </ul>
+            <ul>
+                <li><a href="/promocodes/">Промокоды и купоны</a></li>
+            </ul>
+            <ul>
+                <li><a href="/news/">Новости</a></li>
+            </ul>
+            <ul>
+                <li><a href="/feedbacks/">Отзывы</a></li>
+            </ul>
+            <div class="auth-buttons">
+                {% if user.is_authenticated %}
+                {% if user.is_superuser %}
+                <a href="{% url 'logout' %}">Log out</a>.</p>
+                  {% elif user.is_admin %}
+                    <a href="/admin/home" class="btn btn-primary">Home</a>
+                    <a href="{% url 'logout' %}">Log out</a>.</p>
+                  {% elif user.is_customer %}
+                    <a href="/customer/home" class="btn btn-primary">Home</a>
+                    <a href="{% url 'logout' %}">Log out</a>.</p>
+                  {% elif user.is_employee %}
+                    <a href="/employee/home" class="btn btn-primary">Home</a>
+                    <a href="{% url 'logout' %}">Log out</a>.</p>
+                  {% endif %}
+                {% else %}
+                  <a href="{% url 'login' %}" class="btn btn-primary">Log in</a>
+                  <a href="/accounts/signup/" class="btn btn-primary">Sign up</a>
+                {% endif %}
+              </div>
+        </nav>
+          <div>
+            {% block content %}            
+            {% endblock %}
+        </div>
+
+        <footer class="footer">
+          <p>&copy; 2024 LifeLine</p>
+          <p>
+              <a href="/contacts/">Contact Us</a> |
+              <a href="/policy/">Privacy Policy</a> |
+              <a href="/feedbacks/">Feedback</a>
+          </p>
+          <p>
+              Follow us on:
+              <a href="#" target="_blank"><i class="fab fa-facebook"></i> Facebook</a> |
+              <a href="#" target="_blank"><i class="fab fa-twitter"></i> Twitter</a> |
+              <a href="#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+          </p>
+      </footer>
+      
+
+    </body>
+
+    
+  
+</html>

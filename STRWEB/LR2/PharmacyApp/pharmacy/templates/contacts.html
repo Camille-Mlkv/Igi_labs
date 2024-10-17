@@ -1,0 +1,24 @@
+{% extends 'baseview.html' %}
+
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/contacts_styles.css' %}">
+<div class="contacts-container">
+    <h1>Контакты</h1>
+    <p>Здесь будет отображаться информация о сотрудниках, включая их фото, описание выполняемых работ, контактные данные и другую информацию.</p>
+    
+    <div class="employees">
+        {% for emp in employees %}
+        <div class="employee-card">
+            <img src="{{ emp.photo.url }}" alt="{{ emp.user.username }}" class="employee-photo">
+            <div class="employee-info">
+                <h2>{{ emp.user.username }}</h2>
+                <p>{{ emp.job_description }}</p>
+                <p>Телефон: {{ emp.phone_number }}</p>
+                <p>Почта: <a href="mailto:{{ emp.email }}">{{ emp.email }}</a></p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

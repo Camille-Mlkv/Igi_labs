@@ -1,0 +1,66 @@
+/* Оформление таблицы */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Оформление заголовков таблицы */
+.styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Стили строк таблицы */
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:nth-of-type(odd) {
+    background-color: #ffffff;
+}
+
+/* Выравнивание текста по вертикали */
+.styled-table td {
+    vertical-align: middle;
+    padding: 12px 15px;
+}
+
+/* Стили пустых ячеек */
+.styled-table td:empty {
+    background-color: #ffe6e6;
+}
+
+/* Стиль заголовка таблицы */
+.table-header {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Расположение таблицы на странице */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.styled-table tbody tr:last-child {
+    background-color: #eb5151; /* Светло-серый фон */
+}
+
+.styled-table tbody tr:first-child {
+    background-color: #7efc79; /* Светло-серый фон */
+}
+
+.styled-table tbody tr:nth-child(even) {
+    background-color: #fbea8a; /* Светло-серый фон */
+}

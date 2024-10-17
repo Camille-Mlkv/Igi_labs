@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment</title>
+</head>
+<body>
+    <h1>Payment for {{ item.product.name }}</h1>
+    <p>Quantity: {{ item.quantity }}</p>
+    <p>Price per unit: ${{ item.product.cost }}</p>
+    <p>Total: ${{ item.total_price }}</p>
+
+    <form action="{% url 'complete_payment' item.id %}" method="post">
+        {% csrf_token %}
+        
+        <label for="pickup_point">Choose Pickup point:</label>
+        <select id="pickup_point" name="pickup_point">
+            {% for point in pickup_points %}
+                <option value="{{ point.id }}">{{ point.name }} - {{ point.address }}</option>
+            {% endfor %}
+        </select>
+        
+        <button type="submit">Complete Payment</button>
+    </form>
+</body>
+</html>

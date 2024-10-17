@@ -1,0 +1,13 @@
+{% extends 'baseview.html' %}
+{% load static %}
+      
+{% block content %}
+  <link rel="stylesheet" href="{% static 'css/employee_home_style.css' %}">
+  <h2 class="welcome-title">Welcome to employee home page! <span class="icon-emo-happy"></span></h2>
+  
+  <div class="employee-actions">
+    <a href="{% url 'view_medications' %}" class="btn-action">Check all medications</a>
+    <a href="{% url 'view_suppliers' %}" class="btn-action">Check suppliers</a>
+    <a href="{% url 'view_sales' %}" class="btn-action">View all sales</a>
+  </div>
+{% endblock %}

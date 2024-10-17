@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Доступные элементы */
+input:enabled {
+    background-color: #e0ffe0; /* Зеленый фон для доступных */
+}
+
+/* Обязательные элементы */
+input[required] {
+    border: 2px solid red; /* Красная рамка для обязательных */
+}
+
+/* Заблокированные элементы */
+input:disabled {
+    background-color: #f5f5f5; /* Серый фон для заблокированных */
+    color: #aaa; /* Серый текст для заблокированных */
+    cursor: not-allowed;
+}
+
+/* Элементы со значениями вне диапазона */
+input[type="number"]:invalid {
+    border-color: orange;
+}
+/* Включенные флажки и переключатели */
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+    accent-color: green; /* Зеленый цвет для включенных */
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: wait;
+}
+
+button:hover {
+    background-color: #0056b3; /* Темно-синий при наведении */
+}
+
+
+.field-container {
+    margin-bottom: 20px; /* Отступ между полями */
+}
+
+/* Стили для дочерних элементов внутри field-container */
+.field-container > label {
+    font-weight: bold; /* Жирный шрифт для меток */
+    display: block; /* Метка занимает всю ширину */
+}
+
+label.colored{
+    color:aqua;
+}

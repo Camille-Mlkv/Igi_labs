@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% extends 'baseview.html' %}
+{% load static %}
+
+{% block content %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="{% static 'css/cart_style.css' %}">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="table-header">{{ request.user.username }}'s Cart</h2>
+
+        {% if cart_items %}
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Price per unit</th>
+                        <th>Total</th>
+                        <th>Pay</th>
+                        <th>Decrease</th>
+                        <th>Increase</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in cart_items %}
+                    <tr>
+                        <td>{{ item.product.name }}</td>
+                        <td>{{ item.quantity }}</td>
+                        <td>${{ item.product.cost }}</td>
+                        <td>{{ item.total_price }}</td>
+                        <td>
+                            <a href="{% url 'payment_page' item.id %}" class="btn btn-primary">Pay</a>
+                        </td>
+                        <td>
+                            <a href="{% url 'update_cart_item_quantity' item.id 'decrease' %}" class="btn btn-warning">Decrease</a>
+                        </td>
+                        <td>
+                            <a href="{% url 'update_cart_item_quantity' item.id 'increase' %}" class="btn btn-success">Increase</a>
+                        </td>
+                        <td>
+                            <a href="{% url 'remove_from_cart' item.id %}" class="btn btn-danger">Remove</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            <div class="d-flex justify-content-end">
+                <h4>Total: ${{ total_price }}</h4>
+            </div>
+        {% else %}
+            <p>Your cart is empty.</p>
+        {% endif %}
+    </div>
+</body>
+{% endblock %}

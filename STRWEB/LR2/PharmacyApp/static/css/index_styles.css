@@ -1,0 +1,236 @@
+.partners-grid {
+    display: grid; /* Используем CSS Grid */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Настройка ширины блоков */
+    gap: 20px; /* Промежутки между блоками */
+    margin: 20px 0; /* Отступы сверху и снизу */
+}
+
+.partner-card {
+    background-color: #f0f0f0; /* Цвет фона блока */
+    border-radius: 50%; /* Круглая форма */
+    padding: 20px; /* Отступы внутри блока */
+    text-align: center; /* Выравнивание текста по центру */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для блока */
+    transition: transform 0.2s; /* Плавный переход при наведении */
+}
+
+.partner-card:hover {
+    transform: scale(1.05); /* Увеличение блока при наведении */
+}
+
+.partner-logo {
+    height: 80px; /* Высота логотипа */
+    width: 80px; /* Ширина логотипа (чтобы он был круглым) */
+    border-radius: 50%; /* Круглая форма логотипа */
+}
+
+.partner-name {
+    font-size: 18px; /* Размер шрифта для имени партнера */
+    margin: 10px 0 5px; /* Отступы */
+}
+
+.partner-website {
+    color: #3e11f1; /* Цвет ссылки */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+.partner-website:hover {
+    text-decoration: underline; /* Подчеркивание при наведении на ссылку */
+}
+
+.partner-info {
+    font-size: 14px; /* Размер шрифта для дополнительной информации */
+    color: #555; /* Цвет текста дополнительной информации */
+    margin-top: 5px; /* Отступ сверху */
+}
+
+
+h1 {
+    font-size: 36px; /* Размер заголовка */
+    color: #3e11f1; /* Цвет заголовка */
+    text-align: center; /* Центрируем заголовок */
+    margin-bottom: 20px; /* Отступ снизу */
+    font-family: 'Roboto', sans-serif; /* Шрифт заголовка */
+}
+
+#bannersign{
+    color:#ccc
+}
+
+abbr:hover {
+    background-color: #d1a0e6; /* Цвет фона при наведении */
+    transition: background-color 0.3s; /* Плавный переход цвета */
+}
+
+.intro {
+    font-size: 18px; /* Размер текста абзаца */
+    color: #333; /* Цвет текста */
+    line-height: 1.6; /* Межстрочный интервал */
+    text-align: center; /* Центрируем текст */
+    max-width: 800px; /* Максимальная ширина абзаца */
+    margin: 0 auto; /* Центрируем абзац */
+    padding: 0 20px; /* Отступы по бокам */
+    font-family: 'Roboto', sans-serif; /* Шрифт текста */
+}
+
+dfn {
+    font-style: italic; /* Курсив для определения */
+    color: #555; /* Цвет текста определения */
+}
+
+#life_abbr{
+    background-color: #dbbbff; /* Background color for the abbreviation */
+    padding: 5px 10px; /* Padding inside the abbreviation */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold font */
+    display: inline-block; /* Allows centering */
+    margin: 10px 0; /* Top and bottom margin for spacing */
+}
+
+.banner {
+    position: relative; /* Position relative for overlay positioning */
+    width: 100%; /* Full width */
+    height: 400px; /* Height of the banner */
+    background-image: url('/media/banners/third_banner.jpg'); /* Background image */
+    background-size: cover; /* Cover the whole area */
+    background-position: center; /* Center the image */
+    overflow: hidden; /* Hide overflow */
+}
+
+.banner-overlay {
+    position: absolute; /* Position absolute to overlay text */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to center */
+    color: white; /* Text color */
+    text-align: center; /* Center text */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 20px; /* Padding for overlay */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.banner h2 {
+    font-size: 36px; /* Heading size */
+    font-family: 'Roboto', sans-serif; /* Font for heading */
+}
+
+.banner p {
+    font-size: 18px; /* Font size for paragraph */
+    margin-top: 10px; /* Top margin for paragraph */
+}
+
+
+h1.products-title {
+    text-align: center; /* Center the main title */
+    font-size: 36px; /* Size of the main title */
+    color: #3e11f1; /* Primary color */
+    margin-bottom: 20px; /* Space below title */
+}
+
+.quote {
+    font-style: italic; /* Style for quotes */
+    text-align: center; /* Center align */
+    margin: 20px 0; /* Margins around quote */
+    color: #555; /* Slightly lighter text */
+    font-size: 27px;
+}
+
+q:lang(en) {
+    quotes: "\201C" "\201D";
+}
+q:lang(fr), q:lang(ru) {
+     quotes: "\00AB" "\00BB"; 
+}
+   
+
+
+.health-info {
+    background-color: #ffffff; /* White background for health info */
+    padding: 15px; /* Padding */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    margin-bottom: 20px; /* Space below */
+    text-align: center;
+    font-size: 20px;
+}
+
+.media-container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center them horizontally */
+    gap: 20px; /* Add space between the audio and video */
+    margin-bottom: 20px; /* Space below the container */
+}
+
+.audio-player, .video-player {
+    width: 100%; /* Make them responsive to their container */
+    max-width: 600px; /* Limit maximum width */
+    border-radius: 8px; /* Rounded corners for a polished look */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.btn {
+    display: inline-block; /* Make button inline */
+    padding: 20px 20px; /* Padding */
+    background-color: #3e11f1; /* Primary color for button */
+    color: #fff; /* White text */
+    text-decoration: none; /* No underline */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 20px; /* Space below */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.btn:hover {
+    background-color: #5c27f8; /* Darker shade on hover */
+}
+
+.latest-article {
+    position: fixed;
+    /* position: absolute; */
+    top: 100px; /* Отступ сверху от родителя или страницы */
+    right: 20px; /* Отступ справа */
+    width: 400px; /* Ширина блока */
+    height:190px;
+    padding: 2px;
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100; /* Уровень слоя, чтобы элемент был выше других */
+}
+
+#preloader {
+
+    position: relative; /* Закрепить внизу страницы */
+    left: 0;
+    bottom: 0; /* Расположить внизу */
+    width: 100%; /* Ширина на всю ширину */
+    height: 50px; /* Высота прелоадера */
+    background-color: rgba(255, 255, 255, 0.7); /* Полупрозрачный фон */
+    z-index: 9999; /* Поверх остальных элементов */
+    display: flex; /* Используем flex для центрирования */
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+}
+
+.pill-loader {
+    width: 100px; /* Ширина прелоадера */
+    height: 30px; /* Высота прелоадера */
+    background: linear-gradient(to right, red 50%, rgb(21, 18, 219) 50%); 
+    border-radius: 50px;
+    position: relative;
+    animation: rotate 1.5s infinite linear;
+}
+
+/* Анимация вращения */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+

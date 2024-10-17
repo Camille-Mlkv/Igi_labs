@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+{% extends 'baseview.html' %}
+
+{% block content %}
+  <div class="welcome-container">
+      <h2>Добро пожаловать на официальный сайт аптеки LifeLine! <span class="icon-emo-happy"></span></h2>
+      <a href="{% url 'view_catalog' %}" class="btn btn-primary">Medications</a>
+  </div>
+{% endblock %}
+

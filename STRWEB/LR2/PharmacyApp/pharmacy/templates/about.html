@@ -1,0 +1,118 @@
+{% extends 'baseview.html' %}
+  {% load static %}
+  
+
+{% block content %}
+  <link rel="stylesheet" href="{% static 'css/about_styles.css' %}">
+  <link rel="stylesheet" href="{% static 'css/animation_styles.css' %}">
+
+<div class="animation-container">
+    <div class="customer scrunched" id="sad-patient">
+        <img src="/media/animation/sad_man.png" alt="Сгорбившийся человек" class="customer-img" style="width: 500px; height: 500px;">
+    </div>
+    <div class="pharmacist">
+        <img src="/media/animation/chemist.jpg" alt="Аптекарь" class="pharmacist-img" style="width: 350px; height: 500px;">
+        <img src="/media/animation/chemist_blinking.png" alt="Аптекарь с закрытыми глазами" class="pharmacist-closed" style="width: 350px; height: 500px;">
+    </div>
+    <div class="medicine">
+        <img src="/media/animation/given_medicine.png" alt="Лекарство" class="medicine-img" style="width: 70px; height: 70px; ">
+    </div>
+    <div class="happy-customer">
+        <img src="/media/animation/happy_man.png" alt="Счастливый человек" style="width: 500px; height: 500px;">
+    </div>
+    <div class="company-name-appearing">
+        <p>LifeLine</p>
+    </div>
+</div>
+    
+
+    <div class="about-company">
+      <div class="company-history">
+          <h2>Company History</h2>
+          <p>{{ company.history }}</p>
+      </div>
+  
+      {% if company.logo %}
+        <div class="company-logo-container">
+          <h2>Our Logo</h2>
+          <img src="{{ company.logo.url }}" alt="Company Logo" class="company-logo">
+        </div>
+      {% endif %}
+
+      {% if company.video_url %}
+      <div>
+        <h2>Watch our video</h2>
+        <iframe width="560" height="315" 
+            src="{{ company.video_url }}" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+      </div>
+    {% endif %}
+    <div>
+      <h2>Company Details</h2>
+      <p>{{ company.details }}</p>
+    </div>
+      
+  </div>
+
+  <div class="years-list">
+    <div class="history-requisites-container">
+        <div class="history-container">
+          <h2>Хронология</h2>
+            <ul class="history-list">
+                <li>
+                    <span class="year">2020</span>
+                    <p>Открытие первой аптеки в центре города.</p>
+                </li>
+                <li>
+                    <span class="year">2021</span>
+                    <p>Расширение ассортимента и внедрение онлайн-продаж.</p>
+                </li>
+                <li>
+                    <span class="year">2022</span>
+                    <p>Открытие новой аптеки в жилом районе.</p>
+                </li>
+                <li>
+                    <span class="year">2023</span>
+                    <p>Запуск программы лояльности для постоянных клиентов.</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="requisites-container">
+            <h2>Реквизиты</h2>
+            <p>г. Москва</p>
+            <p>ООО "LifeLine"</p>
+            <p>ИНН 7731340252</p>
+            <p>Регистрационный номер: 8241</p>
+            <p>16 октября 2024</p>
+        </div>
+    </div>
+</div>
+
+
+  
+
+  <h1>Сертификат</h1>
+  <div class="certificate">
+      <div class="cert_header">
+          <p>Единый реестр аптек</p>
+          <p>Свидетельство<br>о внесении сведений</p>
+      </div>
+      <div class="details">
+          <p>г. Москва</p>
+          <p>ООО "LifeLine"</p>
+          <p>ИНН 7731340252</p>
+          <p>Регистрационный номер: 8241</p>
+          <p>16 октября 2024</p>
+      </div>
+      <div class="cert_footer">
+          <p>Меликова К. Р.<br>Директор Ассоциации "LifeLine"</p>
+          <p>Ассоциация "LifeLine"<br>Официальный сайт: LifeLine.ru</p>
+      </div>
+  </div>
+
+{% endblock %}
