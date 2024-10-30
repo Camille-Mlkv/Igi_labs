@@ -36,6 +36,10 @@ p.styled_text::first-line{
     color:rgb(238, 42, 28);
     font-weight: bold;
 }
+p.styled_text::first-letter{
+    color:green;
+    font-weight: bold;
+}
 p.styled_text::before{
     content: "LET'S READ IT!\A";
     white-space: pre;

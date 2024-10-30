@@ -52,6 +52,10 @@ input:disabled {
     cursor: not-allowed;
 }
 
+input:focus{
+    background-color: #fff;
+}
+
 /* Элементы со значениями вне диапазона */
 input[type="number"]:invalid {
     border-color: orange;
