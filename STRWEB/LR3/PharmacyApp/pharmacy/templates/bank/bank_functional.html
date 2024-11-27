@@ -1,0 +1,29 @@
+{% extends 'baseview.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/bank_styles.css' %}">
+  <h1>Клиенты банка (функциональный стиль)</h1>
+  <form id="client-form">
+    <label for="surname">Фамилия:</label>
+    <input type="text" id="surname" required><br>
+    <label for="name">Имя:</label>
+    <input type="text" id="name" required><br>
+    <label for="patronymic">Отчество:</label>
+    <input type="text" id="patronymic" required><br>
+    <label for="accountNumber">Номер счета:</label>
+    <input type="text" id="accountNumber" required><br>
+    <label for="depositAmount">Сумма вклада:</label>
+    <input type="number" id="depositAmount" required><br>
+    <button type="submit">Добавить клиента</button>
+  </form>
+
+  <h2>Список клиентов</h2>
+  <div id="clients-list"></div>
+
+  <h2>Клиенты с несколькими счетами</h2>
+  <div id="results"></div>
+
+  <script src="{% static 'js/bank_task/functional_style.js' %}"></script>
+
+{% endblock %}

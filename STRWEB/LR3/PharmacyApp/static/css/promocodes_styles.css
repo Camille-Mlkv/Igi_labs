@@ -1,0 +1,79 @@
+/* Container for the entire promo codes section */
+.promocodes-container {
+    font-family: sans-serif;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Main header */
+.promocodes-container h1 {
+    font-size: xx-large;
+    font-weight: bold;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Section headers */
+.promocodes-container h2 {
+    font-size: large;
+    font-weight: bold;
+    color: #3e11f1;
+    margin-bottom: 10px;
+}
+
+/* Active and Archived Promo Code Lists */
+.promocodes-container ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+/* Promo code item style */
+.promocodes-container li {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Promo code text and description */
+.promocodes-container li strong {
+    font-size: medium;
+    color: #333;
+    margin-right: 15px;
+}
+
+.promocodes-container li span {
+    font-size: small;
+    color: #555;
+}
+
+/* Message when no promo codes are available */
+.promocodes-container p {
+    font-size: medium;
+    color: #888;
+    font-style: italic;
+}
+
+/* Archived promo codes styling */
+.promocodes-container .archived li {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+}
+
+/* Hover effect for promo codes */
+.promocodes-container li:hover {
+    background-color: #f7f7f7;
+    border-color: #ccc;
+    transition: background-color 0.3s ease;
+}

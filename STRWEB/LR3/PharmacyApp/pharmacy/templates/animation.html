@@ -1,0 +1,26 @@
+{% extends 'baseview.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/animation_styles.css' %}">
+
+<div class="animation-container">
+    <div class="customer scrunched" id="sad-patient">
+        <img src="/media/animation/sad_man.png" alt="Сгорбившийся человек" class="customer-img" style="width: 500px; height: 500px;">
+    </div>
+    <div class="pharmacist">
+        <img src="/media/animation/chemist.jpg" alt="Аптекарь" class="pharmacist-img" style="width: 350px; height: 500px;">
+        <img src="/media/animation/chemist_blinking.png" alt="Аптекарь с закрытыми глазами" class="pharmacist-closed" style="width: 350px; height: 500px;">
+    </div>
+    <div class="medicine">
+        <img src="/media/animation/given_medicine.png" alt="Лекарство" class="medicine-img" style="width: 70px; height: 70px; ">
+    </div>
+    <div class="happy-customer">
+        <img src="/media/animation/happy_man.png" alt="Счастливый человек" style="width: 500px; height: 500px;">
+    </div>
+    <div class="company-name-appearing">
+        <p>LifeLine</p>
+    </div>
+</div>
+
+{% endblock %}

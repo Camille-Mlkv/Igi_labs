@@ -1,0 +1,1274 @@
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+"GET / HTTP/1.1" 200 2909
+"GET /static/css/styles.css HTTP/1.1" 200 6447
+(0.001) SELECT "pharmacy_companyinfo"."id", "pharmacy_companyinfo"."name", "pharmacy_companyinfo"."description", "pharmacy_companyinfo"."video_url", "pharmacy_companyinfo"."logo", "pharmacy_companyinfo"."history", "pharmacy_companyinfo"."details", "pharmacy_companyinfo"."certificate" FROM "pharmacy_companyinfo" ORDER BY "pharmacy_companyinfo"."id" ASC LIMIT 1; args=()
+"GET /about/ HTTP/1.1" 200 8002
+"GET /static/css/about_styles.css HTTP/1.1" 200 3761
+"GET /static/css/animation_styles.css HTTP/1.1" 200 9329
+(0.000) SELECT "pharmacy_promocode"."id", "pharmacy_promocode"."code", "pharmacy_promocode"."description", "pharmacy_promocode"."is_active", "pharmacy_promocode"."date_created", "pharmacy_promocode"."expiration_date" FROM "pharmacy_promocode" WHERE "pharmacy_promocode"."is_active" = 1 ORDER BY "pharmacy_promocode"."date_created" DESC; args=(True,)
+(0.000) SELECT "pharmacy_promocode"."id", "pharmacy_promocode"."code", "pharmacy_promocode"."description", "pharmacy_promocode"."is_active", "pharmacy_promocode"."date_created", "pharmacy_promocode"."expiration_date" FROM "pharmacy_promocode" WHERE "pharmacy_promocode"."is_active" = 0 ORDER BY "pharmacy_promocode"."date_created" DESC; args=(False,)
+"GET /promocodes/ HTTP/1.1" 200 4411
+(0.000) SELECT "pharmacy_feedback"."id", "pharmacy_feedback"."author_id", "pharmacy_feedback"."note", "pharmacy_feedback"."text", "pharmacy_feedback"."date" FROM "pharmacy_feedback"; args=()
+(0.000) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 11; args=(11,)
+"GET /feedbacks/ HTTP/1.1" 200 3090
+"GET /static/css/styles.css HTTP/1.1" 304 0
+(0.000) SELECT "pharmacy_vacancy"."id", "pharmacy_vacancy"."title", "pharmacy_vacancy"."description", "pharmacy_vacancy"."salary", "pharmacy_vacancy"."date_posted", "pharmacy_vacancy"."requirements", "pharmacy_vacancy"."job_type" FROM "pharmacy_vacancy"; args=()
+"GET /vacancies/ HTTP/1.1" 200 5113
+"GET /static/css/vacancies_styles.css HTTP/1.1" 200 1024
+(0.002) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+"GET / HTTP/1.1" 200 2909
+"GET /static/css/styles.css HTTP/1.1" 200 6447
+"GET /media/logo.jpg HTTP/1.1" 200 5786
+"GET /media/favicon.ico HTTP/1.1" 200 318
+(0.005) SELECT "pharmacy_companyinfo"."id", "pharmacy_companyinfo"."name", "pharmacy_companyinfo"."description", "pharmacy_companyinfo"."video_url", "pharmacy_companyinfo"."logo", "pharmacy_companyinfo"."history", "pharmacy_companyinfo"."details", "pharmacy_companyinfo"."certificate" FROM "pharmacy_companyinfo" ORDER BY "pharmacy_companyinfo"."id" ASC LIMIT 1; args=()
+"GET /about/ HTTP/1.1" 200 8002
+"GET /static/css/animation_styles.css HTTP/1.1" 200 9329
+"GET /static/css/about_styles.css HTTP/1.1" 200 3761
+"GET /media/animation/given_medicine.png HTTP/1.1" 200 9039
+"GET /media/company_logos/logo.jpg HTTP/1.1" 200 5786
+"GET /media/animation/chemist.jpg HTTP/1.1" 200 147748
+"GET /media/animation/sad_man.png HTTP/1.1" 200 547233
+"GET /media/animation/chemist_blinking.png HTTP/1.1" 200 976560
+"GET /media/animation/happy_man.png HTTP/1.1" 200 410481
+"GET /media/certificate/medicine.png HTTP/1.1" 200 238230
+"GET /media/certificate/frame.png HTTP/1.1" 200 2690738
+(0.002) SELECT "pharmacy_companyinfo"."id", "pharmacy_companyinfo"."name", "pharmacy_companyinfo"."description", "pharmacy_companyinfo"."video_url", "pharmacy_companyinfo"."logo", "pharmacy_companyinfo"."history", "pharmacy_companyinfo"."details", "pharmacy_companyinfo"."certificate" FROM "pharmacy_companyinfo" ORDER BY "pharmacy_companyinfo"."id" ASC LIMIT 1; args=()
+"GET /about/ HTTP/1.1" 200 8002
+(0.001) SELECT "pharmacy_article"."id", "pharmacy_article"."title", "pharmacy_article"."content", "pharmacy_article"."date_published" FROM "pharmacy_article" ORDER BY "pharmacy_article"."date_published" DESC LIMIT 1; args=()
+(0.000) SELECT "pharmacy_partner"."id", "pharmacy_partner"."name", "pharmacy_partner"."website_url", "pharmacy_partner"."logo" FROM "pharmacy_partner"; args=()
+"GET /index/ HTTP/1.1" 200 6681
+"GET /static/css/index_styles.css HTTP/1.1" 200 8392
+"GET /media/molodets.jpg HTTP/1.1" 200 35332
+"GET /media/partner_logos/pharma_mall.png HTTP/1.1" 200 48318
+"GET /media/banners/third_banner.jpg HTTP/1.1" 200 2199247
+"GET /media/dynamic_content/ne_hodite_v_afriku.mp3 HTTP/1.1" 200 2686188
+(0.002) SELECT "pharmacy_news"."id", "pharmacy_news"."title", "pharmacy_news"."short_description", "pharmacy_news"."description", "pharmacy_news"."photo" FROM "pharmacy_news"; args=()
+"GET /news/ HTTP/1.1" 200 23593
+"GET /static/css/news.css HTTP/1.1" 200 451
+"GET /media/contact_photos/default_photo.png HTTP/1.1" 200 10782
+(0.002) SELECT "pharmacy_employee"."user_id", "pharmacy_employee"."phone_number", "pharmacy_employee"."birth_date", "pharmacy_employee"."photo" FROM "pharmacy_employee"; args=()
+(0.000) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 14; args=(14,)
+Exception while resolving variable 'job_description' in template 'contacts.html'.
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'Employee' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'Employee' object has no attribute 'job_description'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'job_description'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [job_description] in <Employee: Staff>
+Exception while resolving variable 'email' in template 'contacts.html'.
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'Employee' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'Employee' object has no attribute 'email'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'email'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [email] in <Employee: Staff>
+Exception while resolving variable 'email' in template 'contacts.html'.
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'Employee' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'Employee' object has no attribute 'email'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'email'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [email] in <Employee: Staff>
+(0.000) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 18; args=(18,)
+Exception while resolving variable 'job_description' in template 'contacts.html'.
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'Employee' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'Employee' object has no attribute 'job_description'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'job_description'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [job_description] in <Employee: Employee1>
+Exception while resolving variable 'email' in template 'contacts.html'.
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'Employee' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'Employee' object has no attribute 'email'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'email'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [email] in <Employee: Employee1>
+Exception while resolving variable 'email' in template 'contacts.html'.
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'Employee' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'Employee' object has no attribute 'email'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'email'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [email] in <Employee: Employee1>
+"GET /contacts/ HTTP/1.1" 200 3854
+"GET /static/css/contacts_styles.css HTTP/1.1" 200 983
+"GET /media/contact_photos/10011054.jpg HTTP/1.1" 200 47373
+"GET /media/contact_photos/SM.png HTTP/1.1" 200 43215
+(0.002) SELECT "pharmacy_companyinfo"."id", "pharmacy_companyinfo"."name", "pharmacy_companyinfo"."description", "pharmacy_companyinfo"."video_url", "pharmacy_companyinfo"."logo", "pharmacy_companyinfo"."history", "pharmacy_companyinfo"."details", "pharmacy_companyinfo"."certificate" FROM "pharmacy_companyinfo" ORDER BY "pharmacy_companyinfo"."id" ASC LIMIT 1; args=()
+"GET /about/ HTTP/1.1" 200 8002
+(0.002) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+"GET / HTTP/1.1" 200 2909
+"GET /static/css/styles.css HTTP/1.1" 200 6447
+"GET /media/logo.jpg HTTP/1.1" 200 5786
+(0.000) SELECT "pharmacy_medication"."id", "pharmacy_medication"."code", "pharmacy_medication"."category", "pharmacy_medication"."name", "pharmacy_medication"."description", "pharmacy_medication"."instruction", "pharmacy_medication"."cost", "pharmacy_medication"."photo" FROM "pharmacy_medication"; args=()
+"GET /catalog/ HTTP/1.1" 200 5630
+"GET /static/css/medications_list.css HTTP/1.1" 200 4177
+"GET /media/medications_photo/10011054.jpg HTTP/1.1" 200 47373
+"GET /media/medications_photo/%D0%98%D0%B1%D1%83%D0%BF%D1%80%D0%BE%D1%84%D0%B5%D0%BD-200-new.jpg HTTP/1.1" 200 78920
+"GET /media/medications_photo/images.jpg HTTP/1.1" 200 7553
+"GET /media/medications_photo/1b5028e20b87096d9a47387cd63a6e6a.jpg HTTP/1.1" 200 50532
+"GET /media/medications_photo/0w1pwwoywlc155aym0o7lhpn7r8tnkco.jpg HTTP/1.1" 200 59824
+"GET /media/default_photo.png HTTP/1.1" 200 10782
+"GET /test_css HTTP/1.1" 200 2823
+"GET /static/css/test_css.css HTTP/1.1" 200 2235
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\urls\resolvers.py", line 523, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern '' [name='home']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'contacts/' [name='contacts']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'about/' [name='about']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'policy/' [name='policy']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'vacancies/' [name='vacancies']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'index/' [name='index']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'questions/' [name='questions']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'promocodes/' [name='promocodes']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'news/' [name='news']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'news/<int:id>/' [name='news_detail']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'feedbacks/' [name='feedbacks']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'admin/home/' [name='admin_home']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'add/medication' [name='add_medication']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'medications/' [name='view_medications']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'medications/<int:medication_id>/edit/' [name='edit_medication']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'medications/<int:medication_id>/delete/' [name='delete_medication']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'filter_medication' [name='filter_medications']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'medication/<int:id>/' [name='medication_detail']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'add/department' [name='add_department']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'departments/' [name='view_departments']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'departments/<int:department_id>/edit/' [name='edit_department']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'add_supplier/' [name='add_supplier']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'suppliers/' [name='view_suppliers']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'edit_supplier/<int:supplier_id>/edit/' [name='edit_supplier']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'search_medication/' [name='search_medication']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'view_sales/' [name='view_sales']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'view_employees/' [name='view_employees']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'customer/home/' [name='customer_home']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'pickup_points/' [name='view_pickup_points']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'catalog/' [name='view_catalog']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'to_cart/<int:medication_id>/' [name='add_medication_to_cart']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'customer/cart/' [name='customer_cart']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'pay/<int:item_id>/' [name='payment_page']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'complete_payment/<int:item_id>/' [name='complete_payment']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'payment_success/' [name='payment_success']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'cart/update/<int:item_id>/<str:action>/' [name='update_cart_item_quantity']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'cart/remove/<int:item_id>/' [name='remove_from_cart']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'buy_medication/<int:medication_id>/' [name='buy_medication']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'customer/purchases/' [name='customer_purchases']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'leave_feedback/' [name='leave_feedback']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'get_age/' [name='get_age']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'get_country/' [name='get_country']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'employee/home' [name='employee_home']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'admin/statistics' [name='view_statistics']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'animation' [name='animation']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'test_css' [name='test_css']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\Камила\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>], [<URLPattern 'accounts/signup/' [name='signup']>], [<URLPattern 'accounts/signup/customer/' [name='customer_signup']>], [<URLPattern 'accounts/signup/employee/' [name='employee_signup']>], [<URLPattern 'accounts/signup/admin/' [name='admin_signup']>], [<URLPattern '^media\/(?P<path>.*)$'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\urls\resolvers.py", line 523, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern '' [name='home']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'contacts/' [name='contacts']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'about/' [name='about']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'policy/' [name='policy']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'vacancies/' [name='vacancies']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'index/' [name='index']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'questions/' [name='questions']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'promocodes/' [name='promocodes']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'news/' [name='news']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'news/<int:id>/' [name='news_detail']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'feedbacks/' [name='feedbacks']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'admin/home/' [name='admin_home']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'add/medication' [name='add_medication']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'medications/' [name='view_medications']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'medications/<int:medication_id>/edit/' [name='edit_medication']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'medications/<int:medication_id>/delete/' [name='delete_medication']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'filter_medication' [name='filter_medications']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'medication/<int:id>/' [name='medication_detail']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'add/department' [name='add_department']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'departments/' [name='view_departments']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'departments/<int:department_id>/edit/' [name='edit_department']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'add_supplier/' [name='add_supplier']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'suppliers/' [name='view_suppliers']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'edit_supplier/<int:supplier_id>/edit/' [name='edit_supplier']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'search_medication/' [name='search_medication']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'view_sales/' [name='view_sales']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'view_employees/' [name='view_employees']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'customer/home/' [name='customer_home']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'pickup_points/' [name='view_pickup_points']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'catalog/' [name='view_catalog']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'to_cart/<int:medication_id>/' [name='add_medication_to_cart']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'customer/cart/' [name='customer_cart']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'pay/<int:item_id>/' [name='payment_page']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'complete_payment/<int:item_id>/' [name='complete_payment']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'payment_success/' [name='payment_success']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'cart/update/<int:item_id>/<str:action>/' [name='update_cart_item_quantity']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'cart/remove/<int:item_id>/' [name='remove_from_cart']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'buy_medication/<int:medication_id>/' [name='buy_medication']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'customer/purchases/' [name='customer_purchases']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'leave_feedback/' [name='leave_feedback']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'get_age/' [name='get_age']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'get_country/' [name='get_country']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'employee/home' [name='employee_home']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'admin/statistics' [name='view_statistics']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'animation' [name='animation']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'test_css' [name='test_css']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\Камила\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>], [<URLPattern 'accounts/signup/' [name='signup']>], [<URLPattern 'accounts/signup/customer/' [name='customer_signup']>], [<URLPattern 'accounts/signup/employee/' [name='employee_signup']>], [<URLPattern 'accounts/signup/admin/' [name='admin_signup']>], [<URLPattern '^media\/(?P<path>.*)$'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\Камила\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 11370
+"GET /test_css HTTP/1.1" 200 2823
+"GET /test_css HTTP/1.1" 200 2823
+"GET /static/css/test_css.css HTTP/1.1" 200 2283
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\urls\resolvers.py", line 523, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern '' [name='home']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'contacts/' [name='contacts']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'about/' [name='about']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'policy/' [name='policy']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'vacancies/' [name='vacancies']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'index/' [name='index']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'questions/' [name='questions']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'promocodes/' [name='promocodes']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'news/' [name='news']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'news/<int:id>/' [name='news_detail']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'feedbacks/' [name='feedbacks']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'admin/home/' [name='admin_home']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'add/medication' [name='add_medication']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'medications/' [name='view_medications']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'medications/<int:medication_id>/edit/' [name='edit_medication']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'medications/<int:medication_id>/delete/' [name='delete_medication']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'filter_medication' [name='filter_medications']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'medication/<int:id>/' [name='medication_detail']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'add/department' [name='add_department']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'departments/' [name='view_departments']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'departments/<int:department_id>/edit/' [name='edit_department']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'add_supplier/' [name='add_supplier']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'suppliers/' [name='view_suppliers']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'edit_supplier/<int:supplier_id>/edit/' [name='edit_supplier']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'search_medication/' [name='search_medication']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'view_sales/' [name='view_sales']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'view_employees/' [name='view_employees']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'customer/home/' [name='customer_home']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'pickup_points/' [name='view_pickup_points']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'catalog/' [name='view_catalog']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'to_cart/<int:medication_id>/' [name='add_medication_to_cart']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'customer/cart/' [name='customer_cart']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'pay/<int:item_id>/' [name='payment_page']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'complete_payment/<int:item_id>/' [name='complete_payment']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'payment_success/' [name='payment_success']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'cart/update/<int:item_id>/<str:action>/' [name='update_cart_item_quantity']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'cart/remove/<int:item_id>/' [name='remove_from_cart']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'buy_medication/<int:medication_id>/' [name='buy_medication']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'customer/purchases/' [name='customer_purchases']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'leave_feedback/' [name='leave_feedback']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'get_age/' [name='get_age']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'get_country/' [name='get_country']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'employee/home' [name='employee_home']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'admin/statistics' [name='view_statistics']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'animation' [name='animation']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'test_css' [name='test_css']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\Камила\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>], [<URLPattern 'accounts/signup/' [name='signup']>], [<URLPattern 'accounts/signup/customer/' [name='customer_signup']>], [<URLPattern 'accounts/signup/employee/' [name='employee_signup']>], [<URLPattern 'accounts/signup/admin/' [name='admin_signup']>], [<URLPattern '^media\/(?P<path>.*)$'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\urls\resolvers.py", line 523, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern '' [name='home']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'contacts/' [name='contacts']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'about/' [name='about']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'policy/' [name='policy']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'vacancies/' [name='vacancies']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'index/' [name='index']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'questions/' [name='questions']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'promocodes/' [name='promocodes']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'news/' [name='news']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'news/<int:id>/' [name='news_detail']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'feedbacks/' [name='feedbacks']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'admin/home/' [name='admin_home']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'add/medication' [name='add_medication']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'medications/' [name='view_medications']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'medications/<int:medication_id>/edit/' [name='edit_medication']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'medications/<int:medication_id>/delete/' [name='delete_medication']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'filter_medication' [name='filter_medications']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'medication/<int:id>/' [name='medication_detail']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'add/department' [name='add_department']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'departments/' [name='view_departments']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'departments/<int:department_id>/edit/' [name='edit_department']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'add_supplier/' [name='add_supplier']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'suppliers/' [name='view_suppliers']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'edit_supplier/<int:supplier_id>/edit/' [name='edit_supplier']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'search_medication/' [name='search_medication']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'view_sales/' [name='view_sales']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'view_employees/' [name='view_employees']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'customer/home/' [name='customer_home']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'pickup_points/' [name='view_pickup_points']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'catalog/' [name='view_catalog']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'to_cart/<int:medication_id>/' [name='add_medication_to_cart']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'customer/cart/' [name='customer_cart']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'pay/<int:item_id>/' [name='payment_page']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'complete_payment/<int:item_id>/' [name='complete_payment']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'payment_success/' [name='payment_success']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'cart/update/<int:item_id>/<str:action>/' [name='update_cart_item_quantity']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'cart/remove/<int:item_id>/' [name='remove_from_cart']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'buy_medication/<int:medication_id>/' [name='buy_medication']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'customer/purchases/' [name='customer_purchases']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'leave_feedback/' [name='leave_feedback']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'get_age/' [name='get_age']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'get_country/' [name='get_country']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'employee/home' [name='employee_home']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'admin/statistics' [name='view_statistics']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'animation' [name='animation']>], [<URLResolver <module 'pharmacy.urls' from 'C:\\Users\\Камила\\Documents\\253505\\253502_MELIKAVA_15\\STRWEB\\LR2\\PharmacyApp\\pharmacy\\urls.py'> (None:None) ''>, <URLPattern 'test_css' [name='test_css']>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\Камила\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>], [<URLPattern 'accounts/signup/' [name='signup']>], [<URLPattern 'accounts/signup/customer/' [name='customer_signup']>], [<URLPattern 'accounts/signup/employee/' [name='employee_signup']>], [<URLPattern 'accounts/signup/admin/' [name='admin_signup']>], [<URLPattern '^media\/(?P<path>.*)$'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\Камила\\AppData\\Local\\Programs\\Python\\Python36-32\\lib\\site-packages\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 11370
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+"GET / HTTP/1.1" 200 2909
+"GET /static/css/styles.css HTTP/1.1" 200 6447
+"GET /media/logo.jpg HTTP/1.1" 200 5786
+(0.001) SELECT "pharmacy_companyinfo"."id", "pharmacy_companyinfo"."name", "pharmacy_companyinfo"."description", "pharmacy_companyinfo"."video_url", "pharmacy_companyinfo"."logo", "pharmacy_companyinfo"."history", "pharmacy_companyinfo"."details", "pharmacy_companyinfo"."certificate" FROM "pharmacy_companyinfo" ORDER BY "pharmacy_companyinfo"."id" ASC LIMIT 1; args=()
+"GET /about/ HTTP/1.1" 200 8002
+"GET /static/css/about_styles.css HTTP/1.1" 200 3761
+"GET /static/css/animation_styles.css HTTP/1.1" 200 9329
+"GET /media/animation/given_medicine.png HTTP/1.1" 200 9039
+"GET /media/company_logos/logo.jpg HTTP/1.1" 200 5786
+"GET /media/animation/chemist.jpg HTTP/1.1" 200 147748
+"GET /media/certificate/medicine.png HTTP/1.1" 200 238230
+"GET /media/animation/sad_man.png HTTP/1.1" 200 547233
+"GET /media/animation/happy_man.png HTTP/1.1" 200 410481
+"GET /media/animation/chemist_blinking.png HTTP/1.1" 200 976560
+"GET /media/certificate/frame.png HTTP/1.1" 200 2690738
+(0.001) SELECT "pharmacy_vacancy"."id", "pharmacy_vacancy"."title", "pharmacy_vacancy"."description", "pharmacy_vacancy"."salary", "pharmacy_vacancy"."date_posted", "pharmacy_vacancy"."requirements", "pharmacy_vacancy"."job_type" FROM "pharmacy_vacancy"; args=()
+"GET /vacancies/ HTTP/1.1" 200 5113
+"GET /static/css/vacancies_styles.css HTTP/1.1" 200 1024
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+"GET / HTTP/1.1" 200 2909
+(0.001) SELECT "pharmacy_vacancy"."id", "pharmacy_vacancy"."title", "pharmacy_vacancy"."description", "pharmacy_vacancy"."salary", "pharmacy_vacancy"."date_posted", "pharmacy_vacancy"."requirements", "pharmacy_vacancy"."job_type" FROM "pharmacy_vacancy"; args=()
+"GET /vacancies/ HTTP/1.1" 200 5113
+(0.001) SELECT "pharmacy_vacancy"."id", "pharmacy_vacancy"."title", "pharmacy_vacancy"."description", "pharmacy_vacancy"."salary", "pharmacy_vacancy"."date_posted", "pharmacy_vacancy"."requirements", "pharmacy_vacancy"."job_type" FROM "pharmacy_vacancy"; args=()
+"GET /vacancies/ HTTP/1.1" 200 5113
+"GET /static/css/styles.css HTTP/1.1" 200 6447
+"GET /media/logo.jpg HTTP/1.1" 200 5786
+"GET /static/css/vacancies_styles.css HTTP/1.1" 200 1024
+"GET /media/favicon.ico HTTP/1.1" 200 318
+(0.002) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+"GET / HTTP/1.1" 200 2909
+(0.002) SELECT "pharmacy_companyinfo"."id", "pharmacy_companyinfo"."name", "pharmacy_companyinfo"."description", "pharmacy_companyinfo"."video_url", "pharmacy_companyinfo"."logo", "pharmacy_companyinfo"."history", "pharmacy_companyinfo"."details", "pharmacy_companyinfo"."certificate" FROM "pharmacy_companyinfo" ORDER BY "pharmacy_companyinfo"."id" ASC LIMIT 1; args=()
+"GET /about/ HTTP/1.1" 200 8002
+"GET /static/css/about_styles.css HTTP/1.1" 200 3761
+"GET /media/animation/given_medicine.png HTTP/1.1" 200 9039
+"GET /static/css/animation_styles.css HTTP/1.1" 200 9329
+"GET /media/animation/chemist.jpg HTTP/1.1" 200 147748
+"GET /media/animation/happy_man.png HTTP/1.1" 200 410481
+"GET /media/animation/sad_man.png HTTP/1.1" 200 547233
+"GET /media/company_logos/logo.jpg HTTP/1.1" 200 5786
+"GET /media/certificate/medicine.png HTTP/1.1" 200 238230
+"GET /media/certificate/frame.png HTTP/1.1" 200 2690738
+(0.002) SELECT "pharmacy_news"."id", "pharmacy_news"."title", "pharmacy_news"."short_description", "pharmacy_news"."description", "pharmacy_news"."photo" FROM "pharmacy_news"; args=()
+"GET /news/ HTTP/1.1" 200 23593
+"GET /media/contact_photos/default_photo.png HTTP/1.1" 200 10782
+"GET /static/css/news.css HTTP/1.1" 200 451
+(0.002) SELECT "pharmacy_news"."id", "pharmacy_news"."title", "pharmacy_news"."short_description", "pharmacy_news"."description", "pharmacy_news"."photo" FROM "pharmacy_news" WHERE "pharmacy_news"."id" = 1; args=(1,)
+"GET /news/1/ HTTP/1.1" 200 5145
+"GET /static/css/news_details.css HTTP/1.1" 200 1893
+Exception while resolving variable 'tag' in template 'bootstrap4/field.html'.
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [tag] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field': <django.forms.boundfield.BoundField object at 0x17C8EBF0>, 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'field_class': ''}]
+Exception while resolving variable 'wrapper_class' in template 'bootstrap4/field.html'.
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'wrapper_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'wrapper_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'wrapper_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [wrapper_class] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field': <django.forms.boundfield.BoundField object at 0x17C8EBF0>, 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'field_class': ''}]
+Exception while resolving variable 'form_group_wrapper_class' in template 'bootstrap4/field.html'.
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'form_group_wrapper_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'form_group_wrapper_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'form_group_wrapper_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [form_group_wrapper_class] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field': <django.forms.boundfield.BoundField object at 0x17C8EBF0>, 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'field_class': ''}]
+Exception while resolving variable 'html5_required' in template 'bootstrap4/field.html'.
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'html5_required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'html5_required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'html5_required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [html5_required] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field': <django.forms.boundfield.BoundField object at 0x17C8EBF0>, 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'field_class': ''}]
+Exception while resolving variable 'help_text_inline' in template 'bootstrap4/field.html'.
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [help_text_inline] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field': <django.forms.boundfield.BoundField object at 0x17C8EBF0>, 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'field_class': ''}, {}]
+Exception while resolving variable 'error_text_inline' in template 'bootstrap4/field.html'.
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'error_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'error_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'error_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [error_text_inline] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field': <django.forms.boundfield.BoundField object at 0x17C8EBF0>, 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'field_class': ''}, {}]
+Exception while resolving variable 'help_text_inline' in template 'bootstrap4/field.html'.
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [help_text_inline] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field': <django.forms.boundfield.BoundField object at 0x17C8EBF0>, 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'field_class': ''}, {}]
+Exception while resolving variable 'tag' in template 'bootstrap4/field.html'.
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [tag] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field': <django.forms.boundfield.BoundField object at 0x17C8EBF0>, 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'field_class': ''}]
+Exception while resolving variable 'tag' in template 'bootstrap4/field.html'.
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [tag] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field': <django.forms.boundfield.BoundField object at 0x17791750>, 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'field_class': ''}]
+Exception while resolving variable 'wrapper_class' in template 'bootstrap4/field.html'.
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'wrapper_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'wrapper_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'wrapper_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [wrapper_class] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field': <django.forms.boundfield.BoundField object at 0x17791750>, 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'field_class': ''}]
+Exception while resolving variable 'form_group_wrapper_class' in template 'bootstrap4/field.html'.
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'form_group_wrapper_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'form_group_wrapper_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'form_group_wrapper_class'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [form_group_wrapper_class] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field': <django.forms.boundfield.BoundField object at 0x17791750>, 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'field_class': ''}]
+Exception while resolving variable 'html5_required' in template 'bootstrap4/field.html'.
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'html5_required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'html5_required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'html5_required'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [html5_required] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field': <django.forms.boundfield.BoundField object at 0x17791750>, 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'field_class': ''}]
+Exception while resolving variable 'help_text_inline' in template 'bootstrap4/field.html'.
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [help_text_inline] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field': <django.forms.boundfield.BoundField object at 0x17791750>, 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'field_class': ''}, {}]
+Exception while resolving variable 'error_text_inline' in template 'bootstrap4/field.html'.
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'error_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'error_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'error_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [error_text_inline] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field': <django.forms.boundfield.BoundField object at 0x17791750>, 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'field_class': ''}, {}]
+Exception while resolving variable 'help_text_inline' in template 'bootstrap4/field.html'.
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'help_text_inline'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [help_text_inline] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field': <django.forms.boundfield.BoundField object at 0x17791750>, 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'field_class': ''}, {}]
+Exception while resolving variable 'tag' in template 'bootstrap4/field.html'.
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'tag'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [tag] in [{'True': True, 'False': False, 'None': None}, {'True': True, 'False': False, 'None': None, 'field': <django.forms.boundfield.BoundField object at 0x17791750>, 'form_show_errors': True, 'form_show_labels': True, 'label_class': '', 'field_class': ''}]
+"GET /accounts/login/ HTTP/1.1" 200 4203
+(0.001) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."username" = 'Customer1'; args=('Customer1',)
+(0.001) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'hsgjmiwq9stl6a0bizllzxhwzmzs6y1j' LIMIT 1; args=('hsgjmiwq9stl6a0bizllzxhwzmzs6y1j',)
+(0.001) BEGIN; args=None
+(0.002) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT 'hsgjmiwq9stl6a0bizllzxhwzmzs6y1j', 'YmYyODFlNjYwZTllN2Q0ZmI4ODc4ZjMyN2QyNDIwMjBmN2M5MmE5Yjp7fQ==', '2024-11-13 09:47:46.623604'; args=('hsgjmiwq9stl6a0bizllzxhwzmzs6y1j', 'YmYyODFlNjYwZTllN2Q0ZmI4ODc4ZjMyN2QyNDIwMjBmN2M5MmE5Yjp7fQ==', '2024-11-13 09:47:46.623604')
+(0.001) BEGIN; args=None
+(0.001) UPDATE "pharmacy_user" SET "last_login" = '2024-10-30 09:47:46.631604' WHERE "pharmacy_user"."id" = 17; args=('2024-10-30 09:47:46.631604', 17)
+(0.000) BEGIN; args=None
+(0.001) UPDATE "django_session" SET "session_data" = 'ZWUzMWJiY2RhYjg5MjdjMzQ2NjA4ZjIyZjllZTVmOTE1Y2UzN2IwYzp7Il9hdXRoX3VzZXJfaWQiOiIxNyIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiYjQ2MjJjMGU2ZjdiNmE4ZjkyNWFkMTk5YmM5OWI2MDQ0NzI4ZTQ0NyJ9', "expire_date" = '2024-11-13 09:47:46.640587' WHERE "django_session"."session_key" = 'hsgjmiwq9stl6a0bizllzxhwzmzs6y1j'; args=('ZWUzMWJiY2RhYjg5MjdjMzQ2NjA4ZjIyZjllZTVmOTE1Y2UzN2IwYzp7Il9hdXRoX3VzZXJfaWQiOiIxNyIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9oYXNoIjoiYjQ2MjJjMGU2ZjdiNmE4ZjkyNWFkMTk5YmM5OWI2MDQ0NzI4ZTQ0NyJ9', '2024-11-13 09:47:46.640587', 'hsgjmiwq9stl6a0bizllzxhwzmzs6y1j')
+"POST /accounts/login/ HTTP/1.1" 302 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'hsgjmiwq9stl6a0bizllzxhwzmzs6y1j' AND "django_session"."expire_date" > '2024-10-30 09:47:46.653601'); args=('hsgjmiwq9stl6a0bizllzxhwzmzs6y1j', '2024-10-30 09:47:46.653601')
+(0.000) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 17; args=(17,)
+"GET / HTTP/1.1" 302 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'hsgjmiwq9stl6a0bizllzxhwzmzs6y1j' AND "django_session"."expire_date" > '2024-10-30 09:47:46.673580'); args=('hsgjmiwq9stl6a0bizllzxhwzmzs6y1j', '2024-10-30 09:47:46.673580')
+(0.001) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 17; args=(17,)
+"GET /customer/home/ HTTP/1.1" 200 3974
+"GET /static/css/customer_styles.css HTTP/1.1" 200 1814
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'hsgjmiwq9stl6a0bizllzxhwzmzs6y1j' AND "django_session"."expire_date" > '2024-10-30 09:47:50.970801'); args=('hsgjmiwq9stl6a0bizllzxhwzmzs6y1j', '2024-10-30 09:47:50.970801')
+(0.000) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 17; args=(17,)
+(0.001) SELECT "pharmacy_feedback"."id", "pharmacy_feedback"."author_id", "pharmacy_feedback"."note", "pharmacy_feedback"."text", "pharmacy_feedback"."date" FROM "pharmacy_feedback"; args=()
+(0.000) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 11; args=(11,)
+"GET /feedbacks/ HTTP/1.1" 200 3107
+"GET /static/css/feedbacks_styles.css HTTP/1.1" 200 2623
+(0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'hsgjmiwq9stl6a0bizllzxhwzmzs6y1j' AND "django_session"."expire_date" > '2024-10-30 09:47:52.560271'); args=('hsgjmiwq9stl6a0bizllzxhwzmzs6y1j', '2024-10-30 09:47:52.560271')
+(0.000) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 17; args=(17,)
+"GET /leave_feedback/ HTTP/1.1" 200 3283
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'hsgjmiwq9stl6a0bizllzxhwzmzs6y1j' AND "django_session"."expire_date" > '2024-10-30 09:48:28.706234'); args=('hsgjmiwq9stl6a0bizllzxhwzmzs6y1j', '2024-10-30 09:48:28.706234')
+(0.000) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 17; args=(17,)
+"GET / HTTP/1.1" 302 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'hsgjmiwq9stl6a0bizllzxhwzmzs6y1j' AND "django_session"."expire_date" > '2024-10-30 09:48:28.724236'); args=('hsgjmiwq9stl6a0bizllzxhwzmzs6y1j', '2024-10-30 09:48:28.724236')
+(0.001) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 17; args=(17,)
+"GET /customer/home/ HTTP/1.1" 200 3974
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'hsgjmiwq9stl6a0bizllzxhwzmzs6y1j' AND "django_session"."expire_date" > '2024-10-30 09:48:32.056988'); args=('hsgjmiwq9stl6a0bizllzxhwzmzs6y1j', '2024-10-30 09:48:32.056988')
+(0.000) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 17; args=(17,)
+(0.000) SELECT "pharmacy_cartitem"."id", "pharmacy_cartitem"."buyer_id", "pharmacy_cartitem"."product_id", "pharmacy_cartitem"."quantity" FROM "pharmacy_cartitem" WHERE "pharmacy_cartitem"."buyer_id" = 17; args=(17,)
+(0.001) SELECT "pharmacy_medication"."id", "pharmacy_medication"."code", "pharmacy_medication"."category", "pharmacy_medication"."name", "pharmacy_medication"."description", "pharmacy_medication"."instruction", "pharmacy_medication"."cost", "pharmacy_medication"."photo" FROM "pharmacy_medication" WHERE "pharmacy_medication"."id" = 5; args=(5,)
+(0.000) SELECT "pharmacy_medication"."id", "pharmacy_medication"."code", "pharmacy_medication"."category", "pharmacy_medication"."name", "pharmacy_medication"."description", "pharmacy_medication"."instruction", "pharmacy_medication"."cost", "pharmacy_medication"."photo" FROM "pharmacy_medication" WHERE "pharmacy_medication"."id" = 7; args=(7,)
+(0.000) SELECT "pharmacy_medication"."id", "pharmacy_medication"."code", "pharmacy_medication"."category", "pharmacy_medication"."name", "pharmacy_medication"."description", "pharmacy_medication"."instruction", "pharmacy_medication"."cost", "pharmacy_medication"."photo" FROM "pharmacy_medication" WHERE "pharmacy_medication"."id" = 3; args=(3,)
+(0.000) SELECT "pharmacy_medication"."id", "pharmacy_medication"."code", "pharmacy_medication"."category", "pharmacy_medication"."name", "pharmacy_medication"."description", "pharmacy_medication"."instruction", "pharmacy_medication"."cost", "pharmacy_medication"."photo" FROM "pharmacy_medication" WHERE "pharmacy_medication"."id" = 4; args=(4,)
+(0.001) SELECT "pharmacy_medication"."id", "pharmacy_medication"."code", "pharmacy_medication"."category", "pharmacy_medication"."name", "pharmacy_medication"."description", "pharmacy_medication"."instruction", "pharmacy_medication"."cost", "pharmacy_medication"."photo" FROM "pharmacy_medication" WHERE "pharmacy_medication"."id" = 8; args=(8,)
+(0.000) SELECT "pharmacy_medication"."id", "pharmacy_medication"."code", "pharmacy_medication"."category", "pharmacy_medication"."name", "pharmacy_medication"."description", "pharmacy_medication"."instruction", "pharmacy_medication"."cost", "pharmacy_medication"."photo" FROM "pharmacy_medication" WHERE "pharmacy_medication"."id" = 10; args=(10,)
+(0.000) SELECT "pharmacy_medication"."id", "pharmacy_medication"."code", "pharmacy_medication"."category", "pharmacy_medication"."name", "pharmacy_medication"."description", "pharmacy_medication"."instruction", "pharmacy_medication"."cost", "pharmacy_medication"."photo" FROM "pharmacy_medication" WHERE "pharmacy_medication"."id" = 12; args=(12,)
+"GET /customer/cart/ HTTP/1.1" 200 9580
+"GET /static/css/cart_style.css HTTP/1.1" 200 1543
+(0.005) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'hsgjmiwq9stl6a0bizllzxhwzmzs6y1j' AND "django_session"."expire_date" > '2024-10-30 10:51:28.160017'); args=('hsgjmiwq9stl6a0bizllzxhwzmzs6y1j', '2024-10-30 10:51:28.160017')
+(0.001) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 17; args=(17,)
+"GET / HTTP/1.1" 302 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'hsgjmiwq9stl6a0bizllzxhwzmzs6y1j' AND "django_session"."expire_date" > '2024-10-30 10:51:28.225020'); args=('hsgjmiwq9stl6a0bizllzxhwzmzs6y1j', '2024-10-30 10:51:28.225020')
+(0.001) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 17; args=(17,)
+"GET /customer/home/ HTTP/1.1" 200 3974
+(0.001) SELECT "pharmacy_companyinfo"."id", "pharmacy_companyinfo"."name", "pharmacy_companyinfo"."description", "pharmacy_companyinfo"."video_url", "pharmacy_companyinfo"."logo", "pharmacy_companyinfo"."history", "pharmacy_companyinfo"."details", "pharmacy_companyinfo"."certificate" FROM "pharmacy_companyinfo" ORDER BY "pharmacy_companyinfo"."id" ASC LIMIT 1; args=()
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'hsgjmiwq9stl6a0bizllzxhwzmzs6y1j' AND "django_session"."expire_date" > '2024-10-30 10:54:09.131644'); args=('hsgjmiwq9stl6a0bizllzxhwzmzs6y1j', '2024-10-30 10:54:09.131644')
+(0.000) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 17; args=(17,)
+"GET /about/ HTTP/1.1" 200 8019
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'hsgjmiwq9stl6a0bizllzxhwzmzs6y1j' AND "django_session"."expire_date" > '2024-10-30 10:56:48.331145'); args=('hsgjmiwq9stl6a0bizllzxhwzmzs6y1j', '2024-10-30 10:56:48.331145')
+(0.000) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 17; args=(17,)
+(0.000) SELECT "pharmacy_news"."id", "pharmacy_news"."title", "pharmacy_news"."short_description", "pharmacy_news"."description", "pharmacy_news"."photo" FROM "pharmacy_news"; args=()
+"GET /news/ HTTP/1.1" 200 23610
+(0.002) SELECT "pharmacy_news"."id", "pharmacy_news"."title", "pharmacy_news"."short_description", "pharmacy_news"."description", "pharmacy_news"."photo" FROM "pharmacy_news" WHERE "pharmacy_news"."id" = 1; args=(1,)
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'hsgjmiwq9stl6a0bizllzxhwzmzs6y1j' AND "django_session"."expire_date" > '2024-10-30 10:56:50.698342'); args=('hsgjmiwq9stl6a0bizllzxhwzmzs6y1j', '2024-10-30 10:56:50.698342')
+(0.000) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 17; args=(17,)
+"GET /news/1/ HTTP/1.1" 200 5162
+(0.002) SELECT "pharmacy_news"."id", "pharmacy_news"."title", "pharmacy_news"."short_description", "pharmacy_news"."description", "pharmacy_news"."photo" FROM "pharmacy_news" WHERE "pharmacy_news"."id" = 1; args=(1,)
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'hsgjmiwq9stl6a0bizllzxhwzmzs6y1j' AND "django_session"."expire_date" > '2024-10-30 10:58:36.005671'); args=('hsgjmiwq9stl6a0bizllzxhwzmzs6y1j', '2024-10-30 10:58:36.005671')
+(0.000) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 17; args=(17,)
+"GET /news/1/ HTTP/1.1" 200 5162
+"GET /static/css/styles.css HTTP/1.1" 200 6447
+"GET /media/logo.jpg HTTP/1.1" 200 5786
+"GET /media/contact_photos/default_photo.png HTTP/1.1" 200 10782
+"GET /static/css/news_details.css HTTP/1.1" 200 1979
+"GET /media/favicon.ico HTTP/1.1" 200 318
+(0.001) SELECT "pharmacy_news"."id", "pharmacy_news"."title", "pharmacy_news"."short_description", "pharmacy_news"."description", "pharmacy_news"."photo" FROM "pharmacy_news" WHERE "pharmacy_news"."id" = 1; args=(1,)
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'hsgjmiwq9stl6a0bizllzxhwzmzs6y1j' AND "django_session"."expire_date" > '2024-10-30 10:58:41.712583'); args=('hsgjmiwq9stl6a0bizllzxhwzmzs6y1j', '2024-10-30 10:58:41.712583')
+(0.000) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 17; args=(17,)
+"GET /news/1/ HTTP/1.1" 200 5162
+"GET /static/css/styles.css HTTP/1.1" 200 6447
+"GET /media/logo.jpg HTTP/1.1" 200 5786
+"GET /static/css/news_details.css HTTP/1.1" 200 1979
+"GET /media/contact_photos/default_photo.png HTTP/1.1" 200 10782
+"GET /media/favicon.ico HTTP/1.1" 200 318
+(0.001) SELECT "pharmacy_news"."id", "pharmacy_news"."title", "pharmacy_news"."short_description", "pharmacy_news"."description", "pharmacy_news"."photo" FROM "pharmacy_news" WHERE "pharmacy_news"."id" = 1; args=(1,)
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'hsgjmiwq9stl6a0bizllzxhwzmzs6y1j' AND "django_session"."expire_date" > '2024-10-30 10:59:26.127889'); args=('hsgjmiwq9stl6a0bizllzxhwzmzs6y1j', '2024-10-30 10:59:26.127889')
+(0.001) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 17; args=(17,)
+"GET /news/1/ HTTP/1.1" 200 5162
+"GET /static/css/styles.css HTTP/1.1" 200 6447
+"GET /media/logo.jpg HTTP/1.1" 200 5786
+"GET /media/contact_photos/default_photo.png HTTP/1.1" 200 10782
+"GET /static/css/news_details.css HTTP/1.1" 200 1968
+"GET /media/favicon.ico HTTP/1.1" 200 318
+(0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'hsgjmiwq9stl6a0bizllzxhwzmzs6y1j' AND "django_session"."expire_date" > '2024-10-30 11:06:16.207337'); args=('hsgjmiwq9stl6a0bizllzxhwzmzs6y1j', '2024-10-30 11:06:16.207337')
+(0.000) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 17; args=(17,)
+"GET / HTTP/1.1" 302 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'hsgjmiwq9stl6a0bizllzxhwzmzs6y1j' AND "django_session"."expire_date" > '2024-10-30 11:06:16.224328'); args=('hsgjmiwq9stl6a0bizllzxhwzmzs6y1j', '2024-10-30 11:06:16.224328')
+(0.001) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 17; args=(17,)
+"GET /customer/home/ HTTP/1.1" 200 3974
+(0.002) SELECT "pharmacy_article"."id", "pharmacy_article"."title", "pharmacy_article"."content", "pharmacy_article"."date_published" FROM "pharmacy_article" ORDER BY "pharmacy_article"."date_published" DESC LIMIT 1; args=()
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'hsgjmiwq9stl6a0bizllzxhwzmzs6y1j' AND "django_session"."expire_date" > '2024-10-30 11:06:17.949660'); args=('hsgjmiwq9stl6a0bizllzxhwzmzs6y1j', '2024-10-30 11:06:17.949660')
+(0.000) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 17; args=(17,)
+(0.001) SELECT "pharmacy_partner"."id", "pharmacy_partner"."name", "pharmacy_partner"."website_url", "pharmacy_partner"."logo" FROM "pharmacy_partner"; args=()
+"GET /index/ HTTP/1.1" 200 6698
+"GET /static/css/index_styles.css HTTP/1.1" 200 8392
+"GET /media/partner_logos/pharma_mall.png HTTP/1.1" 200 48318
+"GET /media/molodets.jpg HTTP/1.1" 200 35332
+"GET /media/banners/third_banner.jpg HTTP/1.1" 200 2199247
+"GET /media/dynamic_content/ne_hodite_v_afriku.mp3 HTTP/1.1" 200 2686188
+(0.002) SELECT "pharmacy_companyinfo"."id", "pharmacy_companyinfo"."name", "pharmacy_companyinfo"."description", "pharmacy_companyinfo"."video_url", "pharmacy_companyinfo"."logo", "pharmacy_companyinfo"."history", "pharmacy_companyinfo"."details", "pharmacy_companyinfo"."certificate" FROM "pharmacy_companyinfo" ORDER BY "pharmacy_companyinfo"."id" ASC LIMIT 1; args=()
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'hsgjmiwq9stl6a0bizllzxhwzmzs6y1j' AND "django_session"."expire_date" > '2024-10-30 11:06:30.804264'); args=('hsgjmiwq9stl6a0bizllzxhwzmzs6y1j', '2024-10-30 11:06:30.804264')
+(0.000) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 17; args=(17,)
+"GET /about/ HTTP/1.1" 200 8019
+(0.001) SELECT "pharmacy_companyinfo"."id", "pharmacy_companyinfo"."name", "pharmacy_companyinfo"."description", "pharmacy_companyinfo"."video_url", "pharmacy_companyinfo"."logo", "pharmacy_companyinfo"."history", "pharmacy_companyinfo"."details", "pharmacy_companyinfo"."certificate" FROM "pharmacy_companyinfo" ORDER BY "pharmacy_companyinfo"."id" ASC LIMIT 1; args=()
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'hsgjmiwq9stl6a0bizllzxhwzmzs6y1j' AND "django_session"."expire_date" > '2024-10-30 11:06:51.897966'); args=('hsgjmiwq9stl6a0bizllzxhwzmzs6y1j', '2024-10-30 11:06:51.897966')
+(0.000) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 17; args=(17,)
+"GET /about/ HTTP/1.1" 200 8019
+(0.001) SELECT "pharmacy_article"."id", "pharmacy_article"."title", "pharmacy_article"."content", "pharmacy_article"."date_published" FROM "pharmacy_article" ORDER BY "pharmacy_article"."date_published" DESC LIMIT 1; args=()
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'hsgjmiwq9stl6a0bizllzxhwzmzs6y1j' AND "django_session"."expire_date" > '2024-10-30 11:07:41.203605'); args=('hsgjmiwq9stl6a0bizllzxhwzmzs6y1j', '2024-10-30 11:07:41.203605')
+(0.000) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 17; args=(17,)
+(0.000) SELECT "pharmacy_partner"."id", "pharmacy_partner"."name", "pharmacy_partner"."website_url", "pharmacy_partner"."logo" FROM "pharmacy_partner"; args=()
+"GET /index/ HTTP/1.1" 200 6698
+(0.001) SELECT "pharmacy_companyinfo"."id", "pharmacy_companyinfo"."name", "pharmacy_companyinfo"."description", "pharmacy_companyinfo"."video_url", "pharmacy_companyinfo"."logo", "pharmacy_companyinfo"."history", "pharmacy_companyinfo"."details", "pharmacy_companyinfo"."certificate" FROM "pharmacy_companyinfo" ORDER BY "pharmacy_companyinfo"."id" ASC LIMIT 1; args=()
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'hsgjmiwq9stl6a0bizllzxhwzmzs6y1j' AND "django_session"."expire_date" > '2024-10-30 11:08:23.005236'); args=('hsgjmiwq9stl6a0bizllzxhwzmzs6y1j', '2024-10-30 11:08:23.005236')
+(0.001) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 17; args=(17,)
+"GET /about/ HTTP/1.1" 200 8019
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'hsgjmiwq9stl6a0bizllzxhwzmzs6y1j' AND "django_session"."expire_date" > '2024-10-30 11:09:09.234521'); args=('hsgjmiwq9stl6a0bizllzxhwzmzs6y1j', '2024-10-30 11:09:09.234521')
+(0.001) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 17; args=(17,)
+(0.000) SELECT "pharmacy_news"."id", "pharmacy_news"."title", "pharmacy_news"."short_description", "pharmacy_news"."description", "pharmacy_news"."photo" FROM "pharmacy_news"; args=()
+"GET /news/ HTTP/1.1" 200 23610
+(0.002) SELECT "pharmacy_news"."id", "pharmacy_news"."title", "pharmacy_news"."short_description", "pharmacy_news"."description", "pharmacy_news"."photo" FROM "pharmacy_news" WHERE "pharmacy_news"."id" = 1; args=(1,)
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'hsgjmiwq9stl6a0bizllzxhwzmzs6y1j' AND "django_session"."expire_date" > '2024-10-30 11:09:11.004546'); args=('hsgjmiwq9stl6a0bizllzxhwzmzs6y1j', '2024-10-30 11:09:11.004546')
+(0.000) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 17; args=(17,)
+"GET /news/1/ HTTP/1.1" 200 5162
+"GET /static/css/news_details.css HTTP/1.1" 304 0
+(0.001) SELECT "pharmacy_companyinfo"."id", "pharmacy_companyinfo"."name", "pharmacy_companyinfo"."description", "pharmacy_companyinfo"."video_url", "pharmacy_companyinfo"."logo", "pharmacy_companyinfo"."history", "pharmacy_companyinfo"."details", "pharmacy_companyinfo"."certificate" FROM "pharmacy_companyinfo" ORDER BY "pharmacy_companyinfo"."id" ASC LIMIT 1; args=()
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'hsgjmiwq9stl6a0bizllzxhwzmzs6y1j' AND "django_session"."expire_date" > '2024-10-30 11:11:17.423595'); args=('hsgjmiwq9stl6a0bizllzxhwzmzs6y1j', '2024-10-30 11:11:17.423595')
+(0.001) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 17; args=(17,)
+"GET /about/ HTTP/1.1" 200 8019
+(0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'hsgjmiwq9stl6a0bizllzxhwzmzs6y1j' AND "django_session"."expire_date" > '2024-10-30 11:13:16.940989'); args=('hsgjmiwq9stl6a0bizllzxhwzmzs6y1j', '2024-10-30 11:13:16.940989')
+(0.001) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 17; args=(17,)
+"GET / HTTP/1.1" 302 0
+(0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'hsgjmiwq9stl6a0bizllzxhwzmzs6y1j' AND "django_session"."expire_date" > '2024-10-30 11:13:16.957906'); args=('hsgjmiwq9stl6a0bizllzxhwzmzs6y1j', '2024-10-30 11:13:16.957906')
+(0.000) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 17; args=(17,)
+"GET /customer/home/ HTTP/1.1" 200 3974
+(0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'hsgjmiwq9stl6a0bizllzxhwzmzs6y1j' AND "django_session"."expire_date" > '2024-10-30 11:13:18.540376'); args=('hsgjmiwq9stl6a0bizllzxhwzmzs6y1j', '2024-10-30 11:13:18.540376')
+(0.001) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 17; args=(17,)
+(0.000) SELECT "pharmacy_medication"."id", "pharmacy_medication"."code", "pharmacy_medication"."category", "pharmacy_medication"."name", "pharmacy_medication"."description", "pharmacy_medication"."instruction", "pharmacy_medication"."cost", "pharmacy_medication"."photo" FROM "pharmacy_medication"; args=()
+"GET /catalog/ HTTP/1.1" 200 5647
+"GET /static/css/medications_list.css HTTP/1.1" 200 4177
+"GET /media/medications_photo/images.jpg HTTP/1.1" 200 7553
+"GET /media/medications_photo/10011054.jpg HTTP/1.1" 200 47373
+"GET /media/default_photo.png HTTP/1.1" 200 10782
+"GET /media/medications_photo/%D0%98%D0%B1%D1%83%D0%BF%D1%80%D0%BE%D1%84%D0%B5%D0%BD-200-new.jpg HTTP/1.1" 200 78920
+"GET /media/medications_photo/1b5028e20b87096d9a47387cd63a6e6a.jpg HTTP/1.1" 200 50532
+"GET /media/medications_photo/0w1pwwoywlc155aym0o7lhpn7r8tnkco.jpg HTTP/1.1" 200 59824
+(0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'hsgjmiwq9stl6a0bizllzxhwzmzs6y1j' AND "django_session"."expire_date" > '2024-10-30 11:13:29.729309'); args=('hsgjmiwq9stl6a0bizllzxhwzmzs6y1j', '2024-10-30 11:13:29.729309')
+(0.000) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 17; args=(17,)
+(0.000) SELECT "pharmacy_vacancy"."id", "pharmacy_vacancy"."title", "pharmacy_vacancy"."description", "pharmacy_vacancy"."salary", "pharmacy_vacancy"."date_posted", "pharmacy_vacancy"."requirements", "pharmacy_vacancy"."job_type" FROM "pharmacy_vacancy"; args=()
+"GET /vacancies/ HTTP/1.1" 200 5130
+"GET /static/css/vacancies_styles.css HTTP/1.1" 304 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'hsgjmiwq9stl6a0bizllzxhwzmzs6y1j' AND "django_session"."expire_date" > '2024-10-30 11:13:33.480691'); args=('hsgjmiwq9stl6a0bizllzxhwzmzs6y1j', '2024-10-30 11:13:33.480691')
+(0.001) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 17; args=(17,)
+"GET / HTTP/1.1" 302 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'hsgjmiwq9stl6a0bizllzxhwzmzs6y1j' AND "django_session"."expire_date" > '2024-10-30 11:13:33.496671'); args=('hsgjmiwq9stl6a0bizllzxhwzmzs6y1j', '2024-10-30 11:13:33.496671')
+(0.000) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 17; args=(17,)
+"GET /customer/home/ HTTP/1.1" 200 3974
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'hsgjmiwq9stl6a0bizllzxhwzmzs6y1j' AND "django_session"."expire_date" > '2024-10-30 11:13:34.723631'); args=('hsgjmiwq9stl6a0bizllzxhwzmzs6y1j', '2024-10-30 11:13:34.723631')
+(0.001) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 17; args=(17,)
+(0.000) SELECT "pharmacy_medication"."id", "pharmacy_medication"."code", "pharmacy_medication"."category", "pharmacy_medication"."name", "pharmacy_medication"."description", "pharmacy_medication"."instruction", "pharmacy_medication"."cost", "pharmacy_medication"."photo" FROM "pharmacy_medication"; args=()
+"GET /catalog/ HTTP/1.1" 200 5647
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'hsgjmiwq9stl6a0bizllzxhwzmzs6y1j' AND "django_session"."expire_date" > '2024-10-30 11:14:57.417163'); args=('hsgjmiwq9stl6a0bizllzxhwzmzs6y1j', '2024-10-30 11:14:57.417163')
+(0.000) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 17; args=(17,)
+(0.000) SELECT "pharmacy_vacancy"."id", "pharmacy_vacancy"."title", "pharmacy_vacancy"."description", "pharmacy_vacancy"."salary", "pharmacy_vacancy"."date_posted", "pharmacy_vacancy"."requirements", "pharmacy_vacancy"."job_type" FROM "pharmacy_vacancy"; args=()
+"GET /vacancies/ HTTP/1.1" 200 5130
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'hsgjmiwq9stl6a0bizllzxhwzmzs6y1j' AND "django_session"."expire_date" > '2024-10-30 11:16:08.058736'); args=('hsgjmiwq9stl6a0bizllzxhwzmzs6y1j', '2024-10-30 11:16:08.058736')
+(0.000) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 17; args=(17,)
+"GET / HTTP/1.1" 302 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'hsgjmiwq9stl6a0bizllzxhwzmzs6y1j' AND "django_session"."expire_date" > '2024-10-30 11:16:08.075757'); args=('hsgjmiwq9stl6a0bizllzxhwzmzs6y1j', '2024-10-30 11:16:08.075757')
+(0.000) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 17; args=(17,)
+"GET /customer/home/ HTTP/1.1" 200 3974
+(0.002) SELECT "pharmacy_article"."id", "pharmacy_article"."title", "pharmacy_article"."content", "pharmacy_article"."date_published" FROM "pharmacy_article" ORDER BY "pharmacy_article"."date_published" DESC LIMIT 1; args=()
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'hsgjmiwq9stl6a0bizllzxhwzmzs6y1j' AND "django_session"."expire_date" > '2024-10-30 11:16:10.359084'); args=('hsgjmiwq9stl6a0bizllzxhwzmzs6y1j', '2024-10-30 11:16:10.359084')
+(0.000) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 17; args=(17,)
+(0.000) SELECT "pharmacy_partner"."id", "pharmacy_partner"."name", "pharmacy_partner"."website_url", "pharmacy_partner"."logo" FROM "pharmacy_partner"; args=()
+"GET /index/ HTTP/1.1" 200 6698
+(0.002) SELECT "pharmacy_companyinfo"."id", "pharmacy_companyinfo"."name", "pharmacy_companyinfo"."description", "pharmacy_companyinfo"."video_url", "pharmacy_companyinfo"."logo", "pharmacy_companyinfo"."history", "pharmacy_companyinfo"."details", "pharmacy_companyinfo"."certificate" FROM "pharmacy_companyinfo" ORDER BY "pharmacy_companyinfo"."id" ASC LIMIT 1; args=()
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'hsgjmiwq9stl6a0bizllzxhwzmzs6y1j' AND "django_session"."expire_date" > '2024-10-30 11:17:32.283951'); args=('hsgjmiwq9stl6a0bizllzxhwzmzs6y1j', '2024-10-30 11:17:32.283951')
+(0.000) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 17; args=(17,)
+"GET /about/ HTTP/1.1" 200 8019
+(0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'hsgjmiwq9stl6a0bizllzxhwzmzs6y1j' AND "django_session"."expire_date" > '2024-10-30 11:19:08.697089'); args=('hsgjmiwq9stl6a0bizllzxhwzmzs6y1j', '2024-10-30 11:19:08.697089')
+(0.001) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 17; args=(17,)
+(0.000) SELECT "pharmacy_news"."id", "pharmacy_news"."title", "pharmacy_news"."short_description", "pharmacy_news"."description", "pharmacy_news"."photo" FROM "pharmacy_news"; args=()
+"GET /news/ HTTP/1.1" 200 23610
+(0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'hsgjmiwq9stl6a0bizllzxhwzmzs6y1j' AND "django_session"."expire_date" > '2024-10-30 11:20:15.890575'); args=('hsgjmiwq9stl6a0bizllzxhwzmzs6y1j', '2024-10-30 11:20:15.890575')
+(0.001) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 17; args=(17,)
+(0.001) SELECT "pharmacy_employee"."user_id", "pharmacy_employee"."phone_number", "pharmacy_employee"."birth_date", "pharmacy_employee"."photo" FROM "pharmacy_employee"; args=()
+(0.000) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 14; args=(14,)
+Exception while resolving variable 'job_description' in template 'contacts.html'.
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'Employee' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'Employee' object has no attribute 'job_description'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'job_description'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [job_description] in <Employee: Staff>
+Exception while resolving variable 'email' in template 'contacts.html'.
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'Employee' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'Employee' object has no attribute 'email'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'email'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [email] in <Employee: Staff>
+Exception while resolving variable 'email' in template 'contacts.html'.
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'Employee' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'Employee' object has no attribute 'email'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'email'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [email] in <Employee: Staff>
+(0.001) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 18; args=(18,)
+Exception while resolving variable 'job_description' in template 'contacts.html'.
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'Employee' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'Employee' object has no attribute 'job_description'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'job_description'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [job_description] in <Employee: Employee1>
+Exception while resolving variable 'email' in template 'contacts.html'.
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'Employee' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'Employee' object has no attribute 'email'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'email'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [email] in <Employee: Employee1>
+Exception while resolving variable 'email' in template 'contacts.html'.
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'Employee' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'Employee' object has no attribute 'email'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'email'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Камила\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\template\base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [email] in <Employee: Employee1>
+"GET /contacts/ HTTP/1.1" 200 3871
+"GET /static/css/contacts_styles.css HTTP/1.1" 200 983
+"GET /media/contact_photos/SM.png HTTP/1.1" 200 43215
+"GET /media/contact_photos/10011054.jpg HTTP/1.1" 200 47373
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'hsgjmiwq9stl6a0bizllzxhwzmzs6y1j' AND "django_session"."expire_date" > '2024-10-30 11:21:27.251271'); args=('hsgjmiwq9stl6a0bizllzxhwzmzs6y1j', '2024-10-30 11:21:27.251271')
+(0.000) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 17; args=(17,)
+"GET / HTTP/1.1" 302 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'hsgjmiwq9stl6a0bizllzxhwzmzs6y1j' AND "django_session"."expire_date" > '2024-10-30 11:21:27.269533'); args=('hsgjmiwq9stl6a0bizllzxhwzmzs6y1j', '2024-10-30 11:21:27.269533')
+(0.001) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 17; args=(17,)
+"GET /customer/home/ HTTP/1.1" 200 3974
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'hsgjmiwq9stl6a0bizllzxhwzmzs6y1j' AND "django_session"."expire_date" > '2024-10-30 11:21:28.722989'); args=('hsgjmiwq9stl6a0bizllzxhwzmzs6y1j', '2024-10-30 11:21:28.722989')
+(0.000) SELECT "pharmacy_user"."id", "pharmacy_user"."password", "pharmacy_user"."last_login", "pharmacy_user"."is_superuser", "pharmacy_user"."username", "pharmacy_user"."first_name", "pharmacy_user"."last_name", "pharmacy_user"."email", "pharmacy_user"."is_staff", "pharmacy_user"."is_active", "pharmacy_user"."date_joined", "pharmacy_user"."is_customer", "pharmacy_user"."is_employee", "pharmacy_user"."is_admin" FROM "pharmacy_user" WHERE "pharmacy_user"."id" = 17; args=(17,)
+(0.000) SELECT "pharmacy_medication"."id", "pharmacy_medication"."code", "pharmacy_medication"."category", "pharmacy_medication"."name", "pharmacy_medication"."description", "pharmacy_medication"."instruction", "pharmacy_medication"."cost", "pharmacy_medication"."photo" FROM "pharmacy_medication"; args=()
+"GET /catalog/ HTTP/1.1" 200 5647

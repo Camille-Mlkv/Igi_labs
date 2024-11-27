@@ -1,0 +1,80 @@
+{% extends 'baseview.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/contacts_table_styles.css' %}">
+<script src="{% static 'js/contacts_table.js' %}" defer></script>
+
+<div class="contacts-container">
+    <h1>Контакты</h1>
+    <p>Здесь будет отображаться информация о сотрудниках, включая их фото, описание выполняемых работ, контактные данные и другую информацию.</p>
+    
+    {% if request.user.is_admin %}
+        <!-- Форма добавления сотрудников -->
+        <button id="addEmployeeBtn">Добавить сотрудника</button>
+        <div id="addEmployeeForm" style="display:none;">
+            <form id="employeeForm">
+                <input type="text" id="lastName" placeholder="Фамилия" ><br>
+                <input type="text" id="firstName" placeholder="Имя" ><br>
+                <input type="text" id="patronymic" placeholder="Отчество"><br>
+                <input type="email" id="employeeEmail" placeholder="Почта"><br>
+                <input type="url" id="employeeUrl" placeholder="URL фото"><br>
+                <input type="tel" id="employeePhone" placeholder="Телефон"><br>
+                <textarea id="employeeDescription" placeholder="Описание работ"></textarea><br>
+                <button type="submit" id="submitBtn" disabled>Добавить в таблицу</button>
+                <div id="formError" class="error-messages"></div>
+            </form>
+        </div>
+    {% endif %}
+    
+
+    <!-- Поиск сотрудников -->
+    <input type="text" id="searchInput" placeholder="Поиск по сотрудникам">
+    <button id="searchButton">Найти</button>
+
+    <div class="employees">
+        <table id="employeeTable">
+            <thead>
+                <tr>
+                    <th><input type="checkbox" id="selectAllCheckbox"></th>
+                    <th data-sort="last_name">Фамилия<span class="sort-indicator"></span></th>
+                    <th data-sort="first_name">Имя<span class="sort-indicator"></span></th>
+                    <th data-sort="patronymic">Отчество<span class="sort-indicator"></span></th>
+                    <th data-sort="phone">Телефон<span class="sort-indicator"></span></th>
+                    <th data-sort="email">Почта<span class="sort-indicator"></span></th>
+                    <th data-sort="job_description">Описание</th>
+                    <th >Фото</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for emp in employees %}
+                <tr>
+                    <td><input type="checkbox" class="employeeCheckbox"></td>
+                    <td>{{ emp.user.last_name }}</td>
+                    <td>{{ emp.user.first_name }}</td>
+                    <td>{{ emp.user.patronymic }}</td>
+                    <td>{{ emp.user.phone_number }}</td>
+                    <td><a href="mailto:{{ emp.user.email }}">{{ emp.user.email }}</a></td>
+                    <td>{{ emp.job_description }}</td>
+                    <td><img src="{{ emp.photo.url }}" alt="{{ emp.user.username }}" class="employee-photo" height="100px" width="80px"></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div id="detailBlock" style="margin-top: 20px; padding: 10px; border: 1px solid #ccc; background-color: #f9f9f9;">
+        Нажмите на строку таблицы, чтобы увидеть детали.
+    </div>
+
+    <div id="pagination"></div>
+
+    {% if request.user.is_admin %}
+        <button id="rewardButton">Премировать</button>
+        <div id="rewardMessage"></div>
+    {% endif %}
+
+    <div id="preloader">
+        <div class="pill-loader"></div>
+    </div>
+</div>
+{% endblock %}

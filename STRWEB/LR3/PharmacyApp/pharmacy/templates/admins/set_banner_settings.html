@@ -1,0 +1,40 @@
+{% extends 'baseview.html' %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/admin_styles.css' %}">
+
+    <h1>Настройки админа</h1>
+    <h3>Настройки слайдера</h3>
+    <form method="post" class="styled-form">
+        {% csrf_token %}
+        <div class="form-group">
+            {{ form.as_p }}
+        </div>
+        <button id="submit-settings" type="submit" onclick="showAlert()" class="btn-submit">Сохранить</button>
+    </form>
+
+    <!-- <h3>Настройки сайта</h3>
+
+    <input type="checkbox" id="toggleSettings" value="advanced_settings"> Advanced settings
+    <div id="style_advanced_settings">
+        <label>
+            Размер шрифта: 
+            <input type="text" id="fontSizeInput" placeholder="Например: 16px">
+        </label>
+        <label>
+            Цвет шрифта: 
+            <input type="color" id="fontColorInput">
+        </label>
+        <label>
+            Цвет фона: 
+            <input type="color" id="bgColorInput">
+        </label>
+        <button id="applyStylesButton">Применить</button>
+    </div> -->
+    <h3>Настройки сайта</h3>
+    <input type="checkbox" id="toggleSettings" value="advanced_settings"> Advanced settings
+    <div id="style_advanced_settings"></div>
+
+    
+    <script src="{% static 'js/style_site_settings.js' %}" defer></script>
+{% endblock %}

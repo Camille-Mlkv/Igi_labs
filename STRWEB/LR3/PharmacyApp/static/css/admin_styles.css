@@ -1,0 +1,145 @@
+/* Styling for the form container */
+.styled-form {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for form elements */
+.styled-form .form-group {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.styled-form .form-group p {
+    margin: 0;
+}
+
+.styled-form .form-group input,
+.styled-form .form-group select{
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.styled-form .form-group input:focus,
+.styled-form .form-group select:focus,
+.styled-form .form-group textarea:focus {
+    border-color: #b77dde;
+    outline: none;
+}
+
+/* Styling for the submit button */
+.btn-submit {
+    background-color: #b77dde;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #a750e1;
+}
+
+/* Optional: Style the csrf_token field if needed */
+input[type="hidden"] {
+    display: none;
+}
+
+
+#style_advanced_settings {
+    /* visibility: hidden; */
+    display: flex;
+    flex-direction: column; /* Элементы располагаются вертикально */
+    gap: 10px; /* Отступы между элементами */
+    padding: 15px;
+    max-width: 300px; /* Ограничиваем ширину */
+    /* background-color: #f9f9f9; Светлый фон */
+    /*border: 1px solid #ddd;  Легкая рамка */
+    border-radius: 8px; /* Скругленные углы */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень для объема */
+    margin: 20px auto; /* Центрирование по горизонтали */
+}
+
+#style_advanced_settings label {
+    display: flex;
+    flex-direction: column; /* Текст над элементами ввода */
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#style_advanced_settings input[type="text"] {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#style_advanced_settings input[type="color"] {
+    width: 50px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+#style_advanced_settings button {
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #a750e1;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#style_advanced_settings button:hover {
+    background-color: #7104f7;
+}
+
+#exampleText {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+.admin-container {
+    display: flex;
+    height: 100%; /* Устанавливает полную высоту для панели */
+}
+.sidebar {
+    width: 250px; /* Ширина боковой панели */
+    background-color: #f8f9fa; /* Светло-серый фон */
+    padding: 15px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Тень для разделения */
+}
+.sidebar a {
+    display: block;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #470fe1; /* Цвет кнопок */
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.sidebar a:hover {
+    background-color: #007bff;
+    color: white;
+}
+.main-content {
+    flex: 1;
+    padding: 20px;
+}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% extends 'baseview.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/age_checker.css' %}">
+<div class="age-checker-container">
+    <h1>Проверяем возраст :)</h1>
+    <div class="form-group">
+        <label for="birthdate">Enter your birthdate:</label>
+        <input type="date" id="birthdate" />
+    </div>
+    <button id="checkAgeButton" class="btn">Check</button>
+    <p id="result"></p>
+</div>
+
+<script src="{% static 'js/age_checker.js' %}"></script>
+{% endblock %}

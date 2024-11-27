@@ -1,0 +1,59 @@
+/* Styles for the Vacancies Page */
+
+.vacancies-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.vacancy {
+    width: 45%;
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    float: left;
+    margin-right: 5%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.vacancy h2 {
+    font-size: 20px;
+    color: #007BFF;
+    margin-bottom: 10px;
+}
+
+.vacancy p {
+    margin: 5px 0;
+}
+
+.vacancy:last-child {
+    margin-right: 0; /* Remove margin for the last item in a row */
+}
+
+/* Clearfix to fix floating elements */
+.vacancies-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media (max-width: 700px) {
+    .vacancy {
+        background-color: red;
+    }
+}

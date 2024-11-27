@@ -1,0 +1,22 @@
+{% extends 'baseview.html' %}
+{% load static %}
+{% block content %}
+<div class="questions-container">
+    <link rel="stylesheet" href="{% static 'css/faq_styles.css' %}">
+    <h1>Вопросы и ответы</h1>
+    
+    {% for question in questions %}
+    <details>
+        <summary>
+            <mark>{{ question.date_posted }}</mark>
+            {{ question.question }}
+        </summary>
+        <p>
+            {{ question.answer }}
+        </p>
+    </details>
+    {% endfor %}
+    
+
+</div>
+{% endblock %}

@@ -1,0 +1,283 @@
+/* .animation-container{
+    margin-bottom: 20px;
+} */
+.customer{
+    position: absolute;
+}
+.scrunched {
+    width: 20px; 
+    animation: move-to-counter 4s forwards,disappear 500ms forwards 8s;
+}
+
+@keyframes move-to-counter {
+    0% {
+        left: 60%; 
+        transform: rotate(0deg); /* Начальное положение без поворота */
+    }
+    5% {
+        transform: rotate(-5deg); /* Поворот на -5 градусов */
+    }
+    10% {
+        transform: rotate(0deg); /* Возвращение в исходное положение */
+    }
+    15% {
+        transform: rotate(-5deg); /* Поворот на 5 градусов */
+    }
+    20% {
+        transform: rotate(0deg); /* Возвращение в исходное положение */
+    }
+    25% {
+        transform: rotate(-5deg); /* Поворот на -5 градусов */
+    }
+    30% {
+        transform: rotate(0deg); /* Возвращение в исходное положение */
+    }
+    35% {
+        transform: rotate(-5deg); /* Поворот на 5 градусов */
+    }
+    40% {
+        transform: rotate(0deg); /* Возвращение в исходное положение */
+    }
+    45% {
+        transform: rotate(-5deg); /* Поворот на -5 градусов */
+    }
+    50% {
+        transform: rotate(0deg); /* Возвращение в исходное положение */
+    }
+    55% {
+        transform: rotate(-5deg); /* Поворот на 5 градусов */
+    }
+    60% {
+        transform: rotate(0deg); /* Возвращение в исходное положение */
+    }
+    65% {
+        transform: rotate(-5deg); /* Поворот на -5 градусов */
+    }
+    70% {
+        transform: rotate(0deg); /* Возвращение в исходное положение */
+    }
+    75% {
+        transform: rotate(-5deg); /* Поворот на 5 градусов */
+    }
+    80% {
+        transform: rotate(0deg); /* Возвращение в исходное положение */
+    }
+    85% {
+        transform: rotate(-5deg); /* Поворот на -5 градусов */
+    }
+    90% {
+        transform: rotate(0deg); /* Возвращение в исходное положение */
+    }
+    95% {
+        transform: rotate(-5deg); 
+    }
+    100% {
+        left: 15%; 
+        transform: rotate(0deg);
+    }
+}
+
+
+.pharmacist{
+    position: absolute;
+}
+
+.pharmacist-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1; /* Аптекарь с открытыми глазами видим */
+    transition: opacity 1ms ease-in-out;
+    animation: close-eyes 1ms forwards 4s; /* Начинаем анимацию через 4 секунды после начала движения клиента */
+}
+
+/* Аптекарь с закрытыми глазами */
+.pharmacist-closed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0; /* Аптекарь с закрытыми глазами скрыт изначально */
+    transition: opacity 1ms ease-in-out;
+    animation: open-eyes 1s forwards 4s; /* Смена через 4 секунды */
+}
+
+/* Анимация закрытия глаз */
+@keyframes close-eyes {
+    0% {
+        opacity: 1; /* Аптекарь с открытыми глазами */
+    }
+    50% {
+        opacity: 0; /* Аптекарь с открытыми глазами исчезает */
+    }
+}
+
+/* Анимация открытия глаз */
+@keyframes open-eyes {
+    0% {
+        opacity: 0; /* Аптекарь с закрытыми глазами скрыт */
+    }
+    50% {
+        opacity: 1; /* Аптекарь с закрытыми глазами появляется */
+    }
+    100% {
+        opacity: 0; /* Аптекарь с закрытыми глазами исчезает снова */
+    }
+}
+
+
+.medicine {
+    position: absolute;
+    top: 20%; /* Начальная позиция лекарства */
+    left: 10%; /* Начальная позиция лекарства */
+    opacity: 0;  
+    animation: show-medicine 1s forwards 5s, fly-to-customer 2s forwards 6s,disappear 500ms forwards 8s; /* Показываем через 5 секунд, а анимация полета начнется через 6 секунд */
+}
+
+/* Анимация для показа лекарства */
+@keyframes show-medicine {
+    0% {
+        opacity: 0; /* Скрыто */
+    }
+    100% {
+        opacity: 1; /* Видимо */
+    }
+}
+
+@keyframes disappear { /*hmmmm*/
+    0% {
+        opacity: 1; /* Пациент видим */
+    }
+    100% {
+        opacity: 0; /* Пациент исчезает */
+    }
+}
+
+/* Анимация движения лекарства к пациенту */
+@keyframes fly-to-customer {
+    0% {
+        left: 10%; /* Начальная позиция */
+        top: 20%; /* Начальная позиция */
+    }
+    100% {
+        left: 25%; /* Конечная позиция */
+        top: 30%; /* Позиция на уровне клиента */
+        
+    }
+}
+
+.happy-customer {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    opacity: 0; /* Скрыто изначально */
+    animation: show-happy-customer 1s forwards 8s, move-happy-customer 4s forwards 9s; /* Показываем через 8 секунд, а движение начнется через 9 секунд */
+}
+
+/* Анимация появления счастливого пациента */
+@keyframes show-happy-customer {
+    0% {
+        opacity: 0; /* Скрыто */
+    }
+    100% {
+        opacity: 1; /* Видимо */
+    }
+}
+
+/* Анимация движения счастливого пациента в противоположную сторону */
+@keyframes move-happy-customer {
+    0% {
+        left: 20%; 
+        transform: rotate(0deg); /* Начальное положение без поворота */
+    }
+    5% {
+        transform: rotate(-5deg); /* Поворот на -5 градусов */
+    }
+    10% {
+        transform: rotate(0deg); /* Возвращение в исходное положение */
+    }
+    15% {
+        transform: rotate(-5deg); /* Поворот на 5 градусов */
+    }
+    20% {
+        transform: rotate(0deg); /* Возвращение в исходное положение */
+    }
+    25% {
+        transform: rotate(-5deg); /* Поворот на -5 градусов */
+    }
+    30% {
+        transform: rotate(0deg); /* Возвращение в исходное положение */
+    }
+    35% {
+        transform: rotate(-5deg); /* Поворот на 5 градусов */
+    }
+    40% {
+        transform: rotate(0deg); /* Возвращение в исходное положение */
+    }
+    45% {
+        transform: rotate(-5deg); /* Поворот на -5 градусов */
+    }
+    50% {
+        transform: rotate(0deg); /* Возвращение в исходное положение */
+    }
+    55% {
+        transform: rotate(-5deg); /* Поворот на 5 градусов */
+    }
+    60% {
+        transform: rotate(0deg); /* Возвращение в исходное положение */
+    }
+    65% {
+        transform: rotate(-5deg); /* Поворот на -5 градусов */
+    }
+    70% {
+        transform: rotate(0deg); /* Возвращение в исходное положение */
+    }
+    75% {
+        transform: rotate(-5deg); /* Поворот на 5 градусов */
+    }
+    80% {
+        transform: rotate(0deg); /* Возвращение в исходное положение */
+    }
+    85% {
+        transform: rotate(-5deg); /* Поворот на -5 градусов */
+    }
+    90% {
+        transform: rotate(0deg); /* Возвращение в исходное положение */
+    }
+    95% {
+        transform: rotate(-5deg); /* Поворот на 5 градусов */
+    }
+    100% {
+        left: 100%; 
+        transform: rotate(0deg); /* Завершаем анимацию в исходном положении */
+    }
+}
+
+
+.company-name-appearing {
+    display: flex;
+    justify-content: center; /* Горизонтальное центрирование */
+    align-items: flex-start; /* Выравнивание по верху */
+    
+    padding-top: 10vh; /* Добавляем отступ сверху для поднятия текста */
+
+    opacity: 0; /* Изначально скрыто */
+    animation: fade-in 1s forwards 11s; /* Появление через 5 секунд после начала */
+}
+
+.company-name-appearing p {
+    font-size: 5rem; /* Увеличиваем размер шрифта */
+    font-weight: bold; /* Делаем шрифт жирным */
+    color: #3e11f1;
+}
+
+.company-name-appearing h4 {
+    
+    font-weight: bold; /* Делаем шрифт жирным */
+    color: #3e11f1;
+}
+
+@keyframes fade-in {
+    to {
+        opacity: 1; /* Увеличиваем видимость */
+    }
+}

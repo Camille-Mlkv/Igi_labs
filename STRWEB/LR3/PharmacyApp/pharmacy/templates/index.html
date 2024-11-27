@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+{% extends 'baseview.html' %}
+{% load static %}
+
+{% block content %}
+<head>
+    <title>Моя главная страница</title>
+    <meta name="description" content="Наша цель - забота о вас." charset="utf-8" />
+    <link rel="stylesheet" href="{% static 'css/index_styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/banner_styles.css' %}">
+</head>
+
+<body>
+  <div itemscope itemtype="http://schema.org/Pharma">
+    <h1 itemprop="name" hidden>Pharmacy</h1>
+    <p itemprop="description" hidden>The best of the best.</p>
+  </div>
+
+  <div class="bottle" id="bottle1">
+    <img src="/media/bottle.png" alt="Bottle 1">
+  </div>
+  <div class="bottle" id="bottle2">
+    <img src="/media/bottle.png" alt="Bottle 2">
+  </div>
+  <div class="bottle" id="bottle3">
+    <img src="/media/bottle.png" alt="Bottle 3">
+  </div>
+  <div class="bottle" id="bottle4">
+    <img src="/media/bottle.png" alt="Bottle 4">
+  </div>
+  <div class="bottle" id="bottle5">
+    <img src="/media/bottle.png" alt="Bottle 5">
+  </div>
+  <div class="bottle" id="bottle6">
+    <img src="/media/bottle.png" alt="Bottle 6">
+  </div>
+  <div class="bottle" id="bottle7">
+    <img src="/media/bottle.png" alt="Bottle 7">
+  </div>
+
+
+  <h1>LifeLine Pharmacy</h1>
+  <p class="intro">The term <dfn title="LifeLine Pharmacy">LifeLine Pharmacy</dfn> refers to our trusted pharmacy where you can find a wide range of medications and health products.</p>
+  <div align="center">
+    <abbr title="Lifestyle Improvement For Everyone" id="life_abbr">LIFE</abbr>
+  </div>
+  <!-- <div class="banner">
+    <div class="banner-overlay">
+      <h2 id="bannersign">Welcome to LifeLine Pharmacy</h2>
+        <p>Your health, our priority</p>
+    </div>
+  </div> -->
+  <div id="slider" class="slider-container" data-settings='{{settings_json}}'>
+    <div class="slides">
+        <div class="slide">
+            <img src="/media/banners/first_banner.jpg" alt="Slide 1"> 
+            <div class="caption">Introduction</div>
+        </div>
+        <div class="slide">
+            <img src="/media/banners/second_banner.jpg" alt="Slide 2">
+            <div class="caption">We're online</div>
+        </div>
+        <div class="slide">
+            <img src="/media/banners/third_banner.jpg" alt="Slide 3">
+            <div class="caption">Professionals</div>
+        </div>
+    </div>
+    <div class="controls">
+        <button class="prev" aria-label="Previous Slide">←</button>
+        <button class="next" aria-label="Next Slide">→</button>
+    </div>
+    <div class="pagination"></div>
+    <div class="status"></div>
+  </div>
+
+    
+  <h1 class="products-title">Our Products</h1>
+  <p class="quote">
+      <q lang="en" cite="https://www.who.int/news/item/17-09-2024-get-it-right-make-it-safe-who-highlights-safe-diagnosis-during-global-campaign-for-patient-safety">
+          Get it right, make it safe!
+      </q>
+      <q lang="fr" cite="https://www.who.int/news/item/17-09-2024-get-it-right-make-it-safe-who-highlights-safe-diagnosis-during-global-campaign-for-patient-safety">
+        On ne ment pas comme les arracheurs de dents!
+    </q>
+  </p>
+  
+  <div class="media-container">
+      <audio controls class="audio-player">
+          <source src="/media/dynamic_content/ne_hodite_v_afriku.mp3" />
+          Audio content cannot be played
+      </audio>
+  
+      <video width="360" height="240" 
+          src="/media/dynamic_content/pharmacy_video.mp4"
+          controls preload="none" muted class="video-player">
+          Video cannot be displayed
+      </video>
+  </div>
+  <p hidden>Invisible paragraph!</p>
+  <div class="health-info">
+    <strong>Здоровье</strong> не купит <wbr> человек,<br>
+    Ведь оно всего на свете <wbr> дороже,<br>
+    <i>«LifeLine»</i> – сеть лучших <wbr> аптек<br>
+    Стать активней любому <wbr> поможет! <br>
+    <a href="{% url 'view_catalog' %}" class="btn btn-primary">Каталог</a><br>
+  </div>
+
+    <div class="latest-article">
+      <h2>Последняя статья</h2>
+        {% if latest_article %}
+            <h3>{{ latest_article.title }}</h3>
+            <p>{{ latest_article.content }}</p>
+            <p>Опубликовано: {{ latest_article.date_published }}</p>
+        {% else %}
+            <p>Статей еще нет.</p>
+        {% endif %}
+    </div>
+
+
+    <h1>Our Partners</h1>
+<div class="partners-grid">
+    {% for partner in partners %}
+        <div class="partner-card">
+            <img src="{{ partner.logo.url }}" alt="{{ partner.name }}" class="partner-logo">
+            <h3 class="partner-name">{{ partner.name }}</h3>
+            <a href="{{ partner.website_url }}" target="_blank" class="partner-website">{{ partner.website_url }}</a>
+        </div>
+    {% endfor %}
+</div>
+
+
+
+
+  <hr color="blue" size="4">
+  <h2>Пример листинга</h2>
+  <p>
+    <code>
+      <pre>
+        int sum(int x,int y) {
+            return x+y;
+        }
+        </pre>
+      var sum=sum(1,2);<br>
+      Console.WriteLine(sum);
+    </code>
+  </p>
+  <p>The variable in this example is <var>sum</var></p>
+  <p>The output from the code is: <samp>6</samp></p>
+  <figure>
+    <p><img src="/media/molodets.jpg" alt=""></p>
+    <figcaption>Ты молодец!</figcaption>
+  </figure>
+
+  <div id="preloader">
+    <div class="pill-loader"></div>
+  </div>
+
+  
+<script src="{% static 'js/banner.js' %}"></script>
+<!-- <script src="{% static 'js/bottle_animation.js' %}"></script> -->
+</body>
+
+{% endblock %}

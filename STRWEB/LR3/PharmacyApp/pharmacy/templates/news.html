@@ -1,0 +1,26 @@
+
+
+{% extends 'baseview.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/news.css' %}">
+<article>
+    <h1>Новости</h1>
+    <hr>
+    {% for item in news %}
+        <div class="news-container">
+            {% if item.photo %}
+                <img src="{{ item.photo.url }}" alt="News Image">
+            {% endif %}
+            <div class="content">
+                <h2>{{ item.title }}</h2>
+                <div class="summary">{{ item.description }}</div>
+                <i><a href="{% url 'news_detail' item.id %}">Читать далее...</a></i>
+            </div>
+        </div>
+    {% empty %}
+        <h1>Список новостей пуст</h1>
+    {% endfor %}
+</article>
+
+{% endblock %}

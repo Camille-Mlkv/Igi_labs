@@ -1,0 +1,49 @@
+{%extends 'baseview.html' %}
+{% load static %}
+{% block content %}
+  <link rel="stylesheet" href="{% static 'css/admin_styles.css' %}">
+  <h2>Welcome to admin home page! <span class="icon-emo-happy"></span></h2>
+  <h4>Current time: {{date|date:"d/m/Y"}} ({{timezone}})</h4>
+  <!-- <div class="calendar">
+    {{ calendar|safe}}
+  </div>
+    <div>
+      <a href="{% url 'add_medication' %}" class="btn btn-primary">Add Medication</a><br>
+      <a href="{% url 'view_medications' %}" class="btn btn-primary">Check all medications</a><br>
+      <a href="{% url 'add_department' %}" class="btn btn-primary">Add pharmacy department</a><br>
+      <a href="{% url 'view_departments' %}" class="btn btn-primary">Check all departments</a><br>
+      <a href="{% url 'add_supplier' %}" class="btn btn-primary">Add supplier</a><br>
+      <a href="{% url 'view_suppliers' %}" class="btn btn-primary">Check suppliers</a><br>
+      <a href="{% url 'search_medication' %}" class="btn btn-primary">Find medicine</a><br>
+      <a href="{% url 'view_sales' %}" class="btn btn-primary">View all sales</a><br>
+      <a href="{% url 'view_employees' %}" class="btn btn-primary">View employees</a><br>
+      <a href="{% url 'view_statistics' %}" class="btn btn-primary">View statistics</a><br>
+      <a href="{% url 'set_banner_settings' %}" class="btn btn-primary">Banner settings</a><br>
+    </div> -->
+    <div class="admin-container">
+      <!-- Боковая панель -->
+      <div class="sidebar">
+          <a href="{% url 'add_medication' %}">Add Medication</a>
+          <a href="{% url 'view_medications' %}">Check all medications</a>
+          <a href="{% url 'add_department' %}">Add pharmacy department</a>
+          <a href="{% url 'view_departments' %}">Check all departments</a>
+          <a href="{% url 'add_supplier' %}">Add supplier</a>
+          <a href="{% url 'view_suppliers' %}">Check suppliers</a>
+          <a href="{% url 'search_medication' %}">Find medicine</a>
+          <a href="{% url 'view_sales' %}">View all sales</a>
+          <a href="{% url 'view_employees' %}">View employees</a>
+          <a href="{% url 'view_statistics' %}">View statistics</a>
+          <a href="{% url 'set_banner_settings' %}">Admin settings</a>
+          <a href="{% url 'view_charts' %}">Charts</a>
+      </div>
+  
+      <!-- Основной контент -->
+      <div class="main-content">
+          <h4>Current time: {{ date|date:"d/m/Y" }} ({{ timezone }})</h4>
+          <div class="calendar">
+              {{ calendar|safe }}
+          </div>
+      </div>
+  </div>
+
+{% endblock %}

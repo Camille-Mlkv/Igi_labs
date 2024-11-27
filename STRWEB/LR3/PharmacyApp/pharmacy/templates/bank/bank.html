@@ -1,0 +1,8 @@
+{% extends 'baseview.html' %}
+
+{% block content %}
+  <div class="welcome-container">
+      <a href="{% url 'bank-functional' %}" class="btn btn-primary">Functional style</a>
+      <a href="{% url 'bank-oop' %}" class="btn btn-primary">OOP style</a>
+  </div>
+{% endblock %}

@@ -1,0 +1,148 @@
+#medications-wrapper {
+    max-width:730px; /* Максимальная ширина формы */
+    margin: 20px auto; /* Центрирование формы по горизонтали */
+    padding: 20px; /* Внутренний отступ формы */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень для визуального эффекта */
+    background-color: #e4c6ed; /* Цвет фона формы */
+
+}
+
+.medications-grid {
+    display: grid; /* Используем Grid Layout */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Колонки с минимальной шириной 200px */
+    gap: 30px; /* Отступы между элементами */
+    padding: 20px; /* Внутренний отступ для сетки */
+    max-width: 1200px; /* Максимальная ширина контейнера */
+    max-width:730px;
+    margin: 0 auto;
+}
+
+.medication-item {
+    display: none;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.medication-item.active {
+    display: block;
+}
+
+.medication-item:hover {
+    transform: rotateY(10deg) rotateX(10deg);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.medication-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.medication-item:hover .medication-image {
+    transform: scale(1.05);
+}
+
+
+.medication-item a {
+    font-size: 20px; 
+    text-decoration: none;
+    text-align: center; 
+    color: #000; 
+    padding: 5px 10px;
+    font-family: 'Roboto', sans-serif; /* Применяем шрифт к ссылкам */
+    font-weight: 700;
+    color:#3e11f1;
+}
+
+.medication-item a:hover {
+    color: #ff5722; /* Цвет ссылки при наведении */
+    transition: color 0.3s; /* Плавный переход цвета */
+}
+
+.filter-form {
+    display: flex; /* Используем Flexbox для размещения элементов в строку */
+    flex-direction: column; /* Элементы будут в колонку */
+    max-width: 400px; /* Максимальная ширина формы */
+    margin: 20px auto; /* Центрирование формы по горизонтали */
+    padding: 20px; /* Внутренний отступ формы */
+    border: 1px solid #ddd; /* Рамка формы */
+    border-radius: 8px; /* Закругленные углы */
+    background-color: #f9f9f9; /* Цвет фона формы */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень для визуального эффекта */
+}
+
+.filter-form label {
+    margin-bottom: 5px; /* Отступ снизу для меток */
+    font-weight: bold; /* Полужирный текст для меток */
+}
+
+.form-input {
+    padding: 10px; /* Внутренний отступ для полей ввода */
+    margin-bottom: 15px; /* Отступ снизу для полей ввода */
+    border: 1px solid #ccc; /* Цвет рамки */
+    border-radius: 5px; /* Закругленные углы */
+    font-size: 16px; /* Размер шрифта */
+}
+
+.form-input:focus {
+    border-color: #3e11f1; /* Цвет рамки при фокусировке */
+    outline: none; /* Убираем стандартный контур */
+}
+
+.form-button {
+    padding: 10px; /* Внутренний отступ для кнопки */
+    border: none; /* Убираем рамку */
+    border-radius: 5px; /* Закругленные углы */
+    background-color: #3e11f1; /* Цвет фона кнопки */
+    color: #fff; /* Цвет текста */
+    font-size: 16px; /* Размер шрифта */
+    cursor: pointer; /* Курсор при наведении */
+}
+
+.form-button:hover {
+    background-color: #2800c6; /* Цвет фона при наведении */
+}
+
+
+.medications-title {
+    font-size: 24px; /* Размер шрифта */
+    font-weight: bold; /* Полужирный текст */
+    color: #333; /* Цвет текста */
+    text-align: center; /* Выравнивание по центру */
+    margin: 20px 0; /* Отступ сверху и снизу */
+    padding: 10px; /* Внутренний отступ */
+    border-bottom: 2px solid #007bff; /* Нижняя рамка */
+    text-transform: uppercase; /* Преобразование текста в верхний регистр */
+    letter-spacing: 1px; /* Межбуквенное расстояние */
+}
+
+#pagination-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination-button {
+    padding: 10px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    background-color: #866bf1;
+    cursor: pointer;
+    color: white;
+}
+
+.pagination-button:hover{
+    background-color: #6541f4;
+}
+
+.pagination-button.active {
+    background-color: #866bf1;
+    color: white;
+}

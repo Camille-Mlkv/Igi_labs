@@ -1,0 +1,155 @@
+.company-logo {
+    max-width: 100%; 
+    height: auto;
+    transition: transform 0.3s ease-in-out; 
+}
+
+/* Пример увеличения логотипа при наведении */
+.company-logo:hover {
+    transform: scale(1.2); 
+}
+
+.company-logo-container {
+    flex: 0 0 200px; 
+    text-align: center;
+} 
+
+ .about-company {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start;
+    gap: 20px; 
+    width: 1900px;
+    background-color: #f0f4ff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+    margin-top: 150px; /* Уменьшает расстояние между анимацией и информацией о компании */
+    margin-bottom: 10px; /* Уменьшает расстояние между информацией о компании и следующим элементом */
+}
+
+
+.certificate {
+    text-align: center;
+    width: 250px;
+    height: 420px;
+
+    border: 90px solid transparent;
+    border-image: url("/media/certificate/frame.png") 20%;
+
+    background-image: url("/media/certificate/medicine.png"), -webkit-linear-gradient(top, rgba(132, 92, 241, 0.5), rgba(240, 240, 240, 0.966));
+
+    background-repeat: no-repeat, no-repeat; 
+    background-position: center bottom, center center;
+    background-size: 60%, 380px 545px;
+
+    z-index: 2;
+}
+
+.cert_header p {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    padding: 5px 0;
+}
+
+.details p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.cert_footer p {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.years-list {
+    /* padding: 20px; Внешние отступы вокруг списка */
+    background-color: #f0f4ff; /* Светлый фон для контейнера */
+    border-radius: 8px; /* Закругленные углы */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Легкая тень */
+    margin: 20px 0; /* Отступы сверху и снизу */
+}
+
+.history-requisites-container {
+    /* display: flex;  */
+    justify-content: space-between; 
+    align-items: flex-start; 
+}
+
+.history-container {
+    padding: 10px; /* Внутренние отступы */
+    flex: 1; /* Занимает 1 часть доступного пространства */
+    font-size: 25px;
+}
+
+.requisites-container {
+    padding: 10px;
+    flex: 0 0 250px;
+    font-size: 25px;
+    font-style: italic;
+}
+
+.history-list {
+    list-style-type: none; /* Убираем стандартные маркеры списка */
+    padding: 0; /* Убираем внутренние отступы */
+}
+
+.history-list li {
+    display: flex; /* Используем flex для размещения года и текста в строку */
+    align-items: center; /* Выравнивание по центру */
+    margin-bottom: 15px; /* Расстояние между элементами списка */
+}
+
+.year {
+    font-weight: bold; /* Жирный шрифт для года */
+    margin-right: 10px; /* Расстояние между годом и текстом */
+    color: #007BFF; /* Цвет текста для года */
+    font-size: 25px;
+}
+
+.history-list p {
+    margin: 0; /* Убираем отступы для текста */
+    color: #333; /* Цвет текста */
+    font-size: 25px;
+}
+
+
+
+#speak-history-button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#speak-history-button:hover {
+    background-color: #45a049;
+}
+
+#stop-history-button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#stop-history-button:hover {
+    background-color: #e53935;
+}
+/* Плавный поворот на 360 градусов */
+/* .logo-container:hover .company-logo {
+    transform: rotate(360deg); 
+} */
+
+/* Или можно добавить наклон */
+/* .logo-container:hover .company-logo {
+    transform: skewX(20deg); 
+} */
