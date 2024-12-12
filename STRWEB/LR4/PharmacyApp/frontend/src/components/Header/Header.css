@@ -1,0 +1,110 @@
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #2ecc71, #27ae60);
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+/* Стили для логотипа */
+.logo a {
+  text-decoration: none; /* Убираем подчеркивание */
+  color: white;
+  font-size: 1.5rem; /* Крупный текст для логотипа */
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+/* Стили для кнопок в левом меню */
+.left-buttons a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  margin-right: 20px; /* Отступы между кнопками */
+  transition: color 0.3s ease;
+}
+
+/* Стили для кнопок в правом меню */
+.right-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Расстояние между кнопками */
+}
+
+.link-button {
+  text-decoration: none;
+  color: #2c3e50;
+  background-color: #ecf0f1; /* Светло-серый фон кнопки */
+  padding: 10px 15px;
+  border-radius: 4px;
+  border: 1px solid #bdc3c7;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.link-button:hover {
+  background-color: #bdc3c7;
+  color: #2c3e50;
+}
+
+/* Стили для выпадающего списка */
+.user-menu {
+  position: relative; /* Устанавливаем относительное позиционирование для выпадающего меню */
+}
+
+.dropdown-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  margin-top: 10px;
+}
+
+.logout-button {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  color: #e74c3c;
+  font-size: 1rem;
+}
+
+.logout-button:hover {
+  background-color: #f8d7da;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column; /* Элементы в колонку на маленьких экранах */
+    align-items: flex-start;
+  }
+
+  .left-buttons, .right-buttons {
+    margin-top: 10px;
+    gap: 5px;
+  }
+
+  .left-buttons a, .link-button {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+}
+ 

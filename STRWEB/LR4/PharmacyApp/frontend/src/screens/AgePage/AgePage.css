@@ -1,0 +1,52 @@
+.age-prediction-page {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .age-prediction-page h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .age-prediction-page form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .age-prediction-page label {
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .age-prediction-page input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .age-prediction-page button {
+    padding: 10px 15px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .age-prediction-page button:hover {
+    background-color: #45a049;
+  }
+  
+  .age-prediction-page p {
+    text-align: center;
+    font-size: 18px;
+  }
+  

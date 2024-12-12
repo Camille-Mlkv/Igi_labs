@@ -1,0 +1,78 @@
+/* CreateMedicinePage.css */
+
+/* Контейнер компонента */
+.create-medicine-page {
+  font-family: Arial, sans-serif;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 600px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовок страницы */
+.create-medicine-page h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Сообщения об успехе или ошибке */
+.create-medicine-page p {
+  text-align: center;
+  color: green;
+  font-weight: bold;
+}
+
+/* Стили для формы */
+.create-medicine-page form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Метки (label) */
+.create-medicine-page label {
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+/* Поля ввода (input, textarea) */
+.create-medicine-page input[type="text"],
+.create-medicine-page input[type="number"],
+.create-medicine-page textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.create-medicine-page textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Кнопка отправки */
+.create-medicine-page button[type="submit"] {
+  padding: 10px 15px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.create-medicine-page button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Контейнер для каждого поля */
+.create-medicine-page div > div {
+  margin-bottom: 15px;
+}

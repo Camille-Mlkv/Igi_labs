@@ -1,0 +1,35 @@
+.mainback {
+    background-color: #cdf3d7; /* или любой другой цвет */
+    padding: 20px;
+    min-height: 100vh;
+  }
+  
+  .container {
+    max-width: 1200px; /* или ваш желаемый размер */
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px;
+  }
+  
+  .page {
+    flex: 1; /* Заполнить доступное пространство */
+    padding: 10px;
+    background-color: #fff; /* или другой цвет */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center; /* Центрирование заголовка */
+  }
+
+  
+  
